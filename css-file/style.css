@@ -390,9 +390,36 @@ header nav .icons a:hover {
     scale: 1.3;
 }
 
-/* start progects */
+.lottele-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 180px;
+    margin-top: -46px;
+}
 
+dotlottie-player {
+    width: 150px !important;
+    transition: 0.5s ease-in-out;
+}
+
+
+.services .boxs .box:hover dotlottie-player {
+    scale: 1.3;
+}
+
+dotlottie-player
+
+/* start progects */
 .projects .projec_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.projec_box {
     display: flex;
     align-items: center;
     justify-content: space-between;
