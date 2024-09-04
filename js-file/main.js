@@ -16,3 +16,11 @@ function Open_colose_menu()
 {
     nav_links.classList.toggle("active");
 }
+
+let links_heder = document.querySelector(".links");
+let link_nav = document.querySelectorAll(".link-nav");
+function close_nav()
+{
+    nav_links.classList.toggle("active");
+
+}
