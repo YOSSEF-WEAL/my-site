@@ -193,6 +193,7 @@ header nav .logo img {
 header nav .links {
     display: flex;
     gap: 40px;
+    border-bottom: none;
 }
 
 header nav .links a {
@@ -358,7 +359,7 @@ header nav .icons a:hover {
     width: 30%;
     text-align: center;
     padding: 50px 20px;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     transition: 0.3s ease-in-out;
 }
