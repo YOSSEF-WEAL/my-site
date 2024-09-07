@@ -1,4 +1,20 @@
+let nav_links = document.querySelector(".links");
+function Open_colose_menu()
+{
+    nav_links.classList.toggle("active");
+};
+
+
+let links_heder = document.querySelector(".links");
+let link_nav = document.querySelectorAll(".link-nav");
+function close_nav()
+{
+    nav_links.classList.toggle("active");
+
+};
+
 let heder = document.querySelector("header");
+let span_btn_up = document.querySelector(".up");
 
 window.onscroll = function ()
 {
@@ -9,18 +25,20 @@ window.onscroll = function ()
     {
         heder.classList.remove("active");
     }
-}
 
-let nav_links = document.querySelector(".links");
-function Open_colose_menu()
+    if (this.scrollY >= 100)
+    {
+        span_btn_up.classList.add("visible");
+    } else
+    {
+        span_btn_up.classList.remove("visible");
+    }
+};
+
+span_btn_up.onclick = function ()
 {
-    nav_links.classList.toggle("active");
-}
-
-let links_heder = document.querySelector(".links");
-let link_nav = document.querySelectorAll(".link-nav");
-function close_nav()
-{
-    nav_links.classList.toggle("active");
-
-}
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+};
