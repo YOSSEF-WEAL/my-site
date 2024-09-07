@@ -570,13 +570,14 @@ dotlottie-player
 }
 
 .contact .btn {
-    outline: black;
+    outline: none;
     padding: 10px 25px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 8px;
     transition: 0.4s;
     width: 100%;
+    border: none;
 }
 
 /* start footer  */
