@@ -943,3 +943,43 @@ header .icon_menue {
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--main_color);
 }
+
+
+/* start bun up  */
+.up {
+    position: fixed;
+    bottom: 50px;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main_color);
+    color: var(--white_color);
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+.visible {
+    right: 20px;
+}
+
+.up:hover {
+    opacity: 1;
+}
+
+
+@media (max-width:500px) {
+    .up {
+        bottom: 20px;
+    }
+}
+
+
+
