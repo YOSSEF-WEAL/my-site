@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +17,8 @@
     <!-- file css -->
     <link rel="stylesheet" href="./css-file/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -28,7 +33,7 @@
         <span></span>
         <span></span>
     </div>
-       <header>
+    <header data-aos="fade-down">
         <nav class="container">
             <a href="./index.html" class="logo"><img src="./imgs/logo3.png" alt=""></a>
             <div class="links">
@@ -57,7 +62,7 @@
     </header>
     <div id="Home" class="hero">
         <div class="container">
-            <div class="div_TexT">
+            <div data-aos="fade-up-right" class="div_TexT">
                 <h4>Hello i'm</h4>
                 <h1><span>Yossef Weal</span></h1>
                 <h2>Front End Specialist</h2>
@@ -68,12 +73,12 @@
                     <a href="#" download class="btn_no_bg">Download CV</a>
                 </div>
             </div>
-            <div class="div_img">
-                  <img class="person" src="./imgs/hero2.jpg" alt="">
+            <div data-aos="fade-up-left" class="div_img">
+                <img class="person" src="./imgs/hero2.jpg" alt="">
             </div>
         </div>
     </div>
-    <section id="about" class="about">
+    <section data-aos="fade-up" data-aos-duration="3000" id="about" class="about">
         <div class="container">
             <div class="div_text">
                 <h5>About me</h5>
@@ -100,7 +105,7 @@
                 <h2>Our <span>Services</span></h2>
             </div>
             <div class="boxs">
-                <div class="box">
+                <div data-aos="zoom-out-down" class="box">
                     <div class="lottele-div">
                         <dotlottie-player src="https://lottie.host/fde77cda-b6db-4731-b700-697bf5f5609d/nqRpLWwmCF.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -111,7 +116,7 @@
                         time.</p>
                     <a href="#" class="btn">Read More</a>
                 </div>
-                <div class="box">
+                <div data-aos="zoom-out-down" class="box">
                     <div class="lottele-div">
                         <dotlottie-player src="https://lottie.host/c438a018-5bf3-4871-b45c-4a687d70f08b/59pLkBXJN0.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -121,7 +126,7 @@
                     <p>Enjoy a fast and smooth browsing experience and get the best results in search engines (SEO)</p>
                     <a href="#" class="btn">Read More</a>
                 </div>
-                <div class="box">
+                <div data-aos="zoom-out-down" class="box">
                     <div class="lottele-div">
                         <dotlottie-player src="https://lottie.host/e29156b2-f3d9-4d62-9814-589411384da9/ICcImy9bU9.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -142,8 +147,8 @@
                 <h2>Explore my popular <span>Projects</span></h2>
             </div>
             <div class="projec_box">
-                <img src="./imgs/project1.jpg" alt="">
-                <div class="text">
+                <img data-aos="fade-up-right" src="./imgs/project1.jpg" alt="">
+                <div data-aos="fade-up-left" class="text">
                     <h4><span>UI / UX Designe</span></h4>
                     <a target="_blank"
                         href="https://www.behance.net/gallery/203985407/Designing-a-home-furniture-store-application">Designing
@@ -157,8 +162,8 @@
                 </div>
             </div>
             <div class="projec_box projec_box_2">
-                <img src="./imgs/project4.png" alt="">
-                <div class="text">
+                <img data-aos="fade-up-left" src="./imgs/project4.png" alt="">
+                <div data-aos="fade-up-right" class="text">
                     <h4><span>WordPress</span></h4>
                     <a target="_blank" href="https://mindtive.net/">Design and implement a website using WordPress</a>
                     <p>Design and implementation of mindtive Company website using WordPress without using paid themes.
@@ -168,9 +173,9 @@
                 </div>
             </div>
             <div class="projec_box">
-                <img src="./imgs/project3.png" alt="">
+                <img data-aos="fade-up-right" src="./imgs/project3.png" alt="">
 
-                <div class="text">
+                <div data-aos="fade-up-left" class="text">
                     <h4><span>UI / UX Designe & WordPress</span></h4>
                     <a target="_blank" href="https://www.3a-d.com/"> Design and implement a website using WordPress</a>
                     <p>Design and implementation of 3A Digital Company website using WordPress without using
@@ -180,8 +185,8 @@
                 </div>
             </div>
             <div style="margin-bottom: -120px;" class="projec_box projec_box_2">
-                <img src="./imgs/project2.png" alt="">
-                <div class="text">
+                <img data-aos="fade-up-left" src="./imgs/project2.png" alt="">
+                <div data-aos="fade-up-right" class="text">
                     <h4><span>UI / UX Designe</span></h4>
                     <a target="_blank"
                         href="https://www.behance.net/gallery/198402163/Design-a-landing-page-for-healthy-">Design a
@@ -202,7 +207,7 @@
             <h2>Contact <span>Me</span></h2>
         </div>
         <div class="container">
-            <div class="soshel-contect">
+            <div data-aos="fade-down-right" class="soshel-contect">
                 <h2>Follow Me</h2>
                 <div class="links">
                     <a target="_blank" href="mailto:yweal423@gmail.com.net"><i
@@ -218,7 +223,8 @@
                             class="fa-brands fa-behance"></i>Behance</a>
                 </div>
             </div>
-            <form method="post" action="https://api.sheetmonkey.io/form/rqriycmiVXAkwz5V57pPvE">
+            <form data-aos="fade-down-left" method="post"
+                action="https://api.sheetmonkey.io/form/rqriycmiVXAkwz5V57pPvE">
                 <div class="inpts_forms">
                     <input type="text" placeholder="Full name" name="name" required>
                     <input type="text" placeholder="E-mail" name="mail" required>
@@ -230,7 +236,7 @@
             </form>
         </div>
     </section>
-    <footer>
+    <footer data-aos="fade-up">
         <div class="copyReat">
             <img src="./imgs/logo2.png" alt="">
             <p>All rights reserved to Yossef Weal.</p>
@@ -243,9 +249,13 @@
             <a href="https://www.behance.net/yossefweal"><i class="fa-brands fa-behance"></i></a>
         </div>
     </footer>
-        <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
+    <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="./js-file/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
