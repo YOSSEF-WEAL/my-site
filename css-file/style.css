@@ -16,10 +16,70 @@
     --white_color: #fff;
     --black_color: #070707;
     --border-color: #ffffff47;
+    --background-body: #131313;
+    --bg-lines: rgb(255, 255, 255, 0.05);
+    --img-shado: 0px 0px 47px -9px rgb(163 163 163 / 87%);
+    --svg-bg: #fff;
+}
+
+
+.dark_mood {
+    --main_color: #00bf63;
+    --p_color: #000;
+    --bg_color: #ffffff;
+    --white_color: #000000;
+    --black_color: #ffffff;
+    --border-color: #000000dd;
+    --background-body: #EAEAEA;
+    --bg-lines: rgb(0 0 0 / 10%);
+    --img-shado: 0px 0px 47px -9px rgba(0, 0, 0, 0.41);
+    --svg-bg: #000;
+}
+
+#theme_switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--svg-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2000;
+    border: none;
+    cursor: pointer;
+    scale: 0.87;
+    right: 20px;
+    top: 115px;
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+#theme_switch:hover {
+    scale: 1;
+    opacity: 1;
+}
+
+#theme_switch svg {
+    fill: var(--main_color);
+    scale: 1.3;
+}
+
+#theme_switch svg:last-child {
+    display: none;
+}
+
+.dark_mood #theme_switch svg:first-child {
+    display: none;
+}
+
+.dark_mood #theme_switch svg:last-child {
+    display: block;
 }
 
 body {
-    background: #131313;
+    background: var(--background-body);
 }
 
 .container {
@@ -92,7 +152,7 @@ section {
     top: 0;
     z-index: -1;
     height: 100%;
-    background: rgb(255, 255, 255, 0.05);
+    background: var(--bg-lines);
     width: 1px;
     -webkit-animation: left_Right 18s infinite;
     animation: left_Right 18s infinite;
@@ -273,6 +333,7 @@ header nav .icons a:hover {
     position: relative;
     border-radius: 600px;
     overflow: hidden;
+    box-shadow: var(--img-shado);
 }
 
 .hero .div_img .bg_img {
@@ -431,6 +492,7 @@ dotlottie-player
     width: 45%;
     border-radius: 10px;
     transition: 0.4s ease-in-out;
+    box-shadow: var(--img-shado);
 }
 
 .projects .projec_box img:hover {
@@ -945,7 +1007,6 @@ header .icon_menue {
     background-color: var(--main_color);
 }
 
-
 /* start bun up  */
 .up {
     position: fixed;
@@ -982,6 +1043,3 @@ header .icon_menue {
         scale: 0.8;
     }
 }
-
-
-
