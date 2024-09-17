@@ -222,6 +222,7 @@ section {
 
 .top_sc h2 {
     font-size: 35px;
+     color: var(--white_color);
 }
 
 /* start header */
@@ -439,6 +440,7 @@ header nav .icons a:hover {
 .services .boxs .box h3 {
     font-size: 25px;
     margin-bottom: 20px;
+    color: var(--white_color);
 }
 
 .services .boxs .box p {
