@@ -319,6 +319,7 @@ header nav .icons a:hover {
     font-size: 60px;
     font-weight: normal;
     line-height: 0.9;
+    color: var(--white_color);
 }
 
 .hero .div_TexT p {
