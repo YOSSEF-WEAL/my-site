@@ -80,6 +80,7 @@
 
 body {
     background: var(--background-body);
+    user-select: none;
 }
 
 .container {
@@ -90,6 +91,8 @@ body {
 
 img {
     width: 100%;
+    pointer-events: none;
+}
 }
 
 h1,
