@@ -12,10 +12,9 @@
     <link rel="icon" href="./imgs/logo-rades.png">
     <meta property="og:image" content="./imgs/logo-rades.png" />
     <!-- file css -->
-    <link rel="stylesheet" href="./css-file/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link class="Animation_Library" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="./css-file/style.css">
 </head>
 
 <body>
@@ -136,7 +135,8 @@
                 <div data-aos="zoom-out-down" class="box">
                     <div class="lottele-div">
                         <dotlottie-player src="https://lottie.host/e29156b2-f3d9-4d62-9814-589411384da9/ICcImy9bU9.json"
-                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+                            background="transparent" speed="1"
+                            style="width: 300px; height: 300px; stroke: var(--main_color);" loop
                             autoplay></dotlottie-player>
                     </div>
                     <h3>Front-end Development</h3>
@@ -153,8 +153,25 @@
             <div class="top_sc">
                 <h2>Explore my popular <span>Projects</span></h2>
             </div>
+            <div class="projec_box projec_box_2">
+                <iframe data-aos="fade-up-left" style="scale: 1.1; width: 45%;"
+                    src="https://www.behance.net/embed/project/209259147?ilo0=1" height="316" width="404"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin"></iframe>
+                <div data-aos="fade-up-right" class="text">
+                    <h4><span>WordPress</span></h4>
+                    <a target="_blank" href="https://mindtive.net/">Design and implement a website using WordPress</a>
+                    <p>Design and implementation of mindtive Company website using WordPress without using paid themes.
+                    </p>
+                    <a target="_blank" href="https://mindtive.net/" class="link"><i
+                            class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
             <div class="projec_box">
-                <img data-aos="fade-up-right" src="./imgs/project1.jpg" alt="">
+                <iframe style="scale: 1.1; width: 45%;" data-aos="fade-up-right"
+                    src="https://www.behance.net/embed/project/203985407?ilo0=1" height="316" width="404"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin"></iframe>
                 <div data-aos="fade-up-left" class="text">
                     <h4><span>UI / UX Designe</span></h4>
                     <a target="_blank"
@@ -168,6 +185,7 @@
                         class="link"><i class="fa-solid fa-arrow-up"></i></a>
                 </div>
             </div>
+
             <div class="projec_box projec_box_2">
                 <img data-aos="fade-up-left" src="./imgs/project4.png" alt="">
                 <div data-aos="fade-up-right" class="text">
@@ -192,7 +210,10 @@
                 </div>
             </div>
             <div style="margin-bottom: -120px;" class="projec_box projec_box_2">
-                <img data-aos="fade-up-left" src="./imgs/project2.png" alt="">
+                <iframe style="scale: 1.1; width: 45%;" data-aos="fade-up-left"
+                    src="https://www.behance.net/embed/project/198402163?ilo0=1" height="316" width="404"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin"></iframe>
                 <div data-aos="fade-up-right" class="text">
                     <h4><span>UI / UX Designe</span></h4>
                     <a target="_blank"
@@ -258,11 +279,11 @@
     </footer>
     <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    <script src="./js-file/main.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="./js-file/main.js" defer></script>
 </body>
 
 </html>
