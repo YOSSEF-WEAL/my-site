@@ -254,6 +254,9 @@ header nav .logo img {
   width: 200px;
   transition: 0.4s ease-in-out;
 }
+.logo_ph {
+  display: none;
+}
 
 header nav .links {
   display: flex;
@@ -724,6 +727,12 @@ header .icon_menue {
   header .links .logo {
     display: block;
   }
+  .logo {
+    display: none;
+  }
+  .logo_ph {
+    display: block;
+  }
 
   header .icon_menue {
     display: block;
@@ -845,7 +854,7 @@ header .icon_menue {
   }
 
   header nav .logo img {
-    width: 170px;
+    width: 70px;
   }
 
   header nav .links.active {
