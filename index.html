@@ -9,8 +9,7 @@
     <meta name="description" content="Yossef Weal Portfolio">
     <meta property="og:title" content="This is the official website of Yossef Wael.">
     <!-- meta wep end -->
-    <link rel="icon" href="./imgs/logo-rades.png">
-    <meta property="og:image" content="./imgs/logo-rades.png" />
+    <link rel="icon" href="./imgs/logo_rades.png">
     <!-- file css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link class="Animation_Library" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -18,21 +17,19 @@
 </head>
 
 <body>
-        <!-- Loding -->
+
+
+    <!-- Loding -->
     <div class="spinner-wrapper">
-        <div class="terminal-loader">
-            <div class="terminal-header">
-                <div class="terminal-title">Status</div>
-                <div class="terminal-controls">
-                    <div class="control close"></div>
-                    <div class="control minimize"></div>
-                    <div class="control maximize"></div>
-                </div>
-            </div>
-            <div class="text">Loading...</div>
+        <div class="loader">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
     </div>
     <!-- Loding -->
+
+
 
     <button data-aos="fade-left" id="theme_switch">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
@@ -57,12 +54,12 @@
     </div>
     <header data-aos="fade-down">
         <nav class="container">
-            <a href="./index.html" class="logo"><img src="./imgs/logo3.png" alt=""></a>
+            <a href="./index.html" class="logo"><img src="./imgs/logo_min.png" alt=""></a>
             <div class="links">
                 <span class="close_menue" onclick="Open_colose_menu()">
                     <i class="fa-solid fa-x"></i>
                     </i></span>
-                <a href="./index.html" onclick="close_nav()" class="logo"><img src="./imgs/logo3.png" alt=""></a>
+                <a href="./index.html" onclick="close_nav()" class="logo"><img src="./imgs/logo_min.png" alt=""></a>
                 <a href="#Home" onclick="close_nav()" class="link-nav">Home</a>
                 <a href="#about" onclick="close_nav()" class="link-nav">About</a>
                 <a href="#services" onclick="close_nav()" class="link-nav">Services</a>
@@ -169,7 +166,7 @@
             <div class="top_sc">
                 <h2>Explore my popular <span>Projects</span></h2>
             </div>
-                        <div class="projec_box">
+            <div class="projec_box">
                 <iframe style="scale: 1.1; width: 45%;" data-aos="fade-up-right"
                     src="https://www.behance.net/embed/project/209537161?ilo0=1" height="316" width="404"
                     allowfullscreen lazyload frameborder="0" allow="clipboard-write"
@@ -300,9 +297,11 @@
             </form>
         </div>
     </section>
+
+
     <footer>
         <div class="copyReat">
-            <img src="./imgs/logo2.png" alt="">
+            <img src="./imgs/logo_rades.png" alt="">
             <p>All rights reserved to Yossef Weal.</p>
         </div>
         <div class="icons">
@@ -313,6 +312,8 @@
             <a href="https://www.behance.net/yossefweal"><i class="fa-brands fa-behance"></i></a>
         </div>
     </footer>
+
+
     <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -323,3 +324,15 @@
 </body>
 
 </html>
+
+<style>
+    .elementor-15902 .elementor-element.elementor-element-7c0c217a:not(.elementor-motion-effects-element-type-background),
+    .elementor-15902 .elementor-element.elementor-element-7c0c217a>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+        display: none;
+    }
+
+    .elementor-15902 .elementor-element.elementor-element-718da66:not(.elementor-motion-effects-element-type-background),
+    .elementor-15902 .elementor-element.elementor-element-718da66>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+        display: none;
+    }
+</style>
