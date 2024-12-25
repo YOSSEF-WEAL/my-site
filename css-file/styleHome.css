@@ -17,7 +17,7 @@ body {
   background: linear-gradient(90deg, #4ad493, #007374);
 }
 .contentCard {
-  background: rgb(0 0 0 / 50%);
+   background: rgb(15 40 47 / 50%);
   backdrop-filter: blur(30px);
   width: 500px;
   border-radius: 8px;
