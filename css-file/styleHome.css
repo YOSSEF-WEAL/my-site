@@ -13,10 +13,12 @@
 P {
   margin: 0;
 }
+body {
+  background: linear-gradient(90deg, #4ad493, #007374);
+}
 .contentCard {
-  background: rgb(255 255 255 / 25%);
-  /* background: rgb(0 0 0 / 25%); */
-  backdrop-filter: blur(10px);
+  background: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(30px);
   width: 500px;
   border-radius: 8px;
   margin-top: 30px;
@@ -52,7 +54,7 @@ P {
       }
     }
     .item:hover {
-      background: var(--main_color);
+      background: linear-gradient(-90deg, #4ad493, #007374);
     }
   }
 }
