@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Yossef Weal</title>
+    <!-- meta wep start -->
+    <meta name="description" content="Yossef Weal Portfolio">
+    <meta property="og:title" content="This is the official website of Yossef Wael.">
+    <!-- meta wep end -->
+    <link rel="icon" href="./imgs/logo_rades.png">
+    <!-- file css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link class="Animation_Library" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css-file/style.css">
+</head>
+
+<body>
+
+
+    <!-- Loding -->
+    <div class="spinner-wrapper">
+        <div class="loader">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <!-- Loding -->
+
+
+
+    <button data-aos="fade-left" id="theme_switch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+                d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+        </svg>
+    </button>
+    <div class="bg-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <header data-aos="fade-down">
+        <nav class="container">
+            <a href="./index.html" class="logo"><img src="./imgs/logo_min.png" alt=""></a>
+            <a href="./index.html" class="logo logo_ph"><img src="./imgs/logo_rades.png" alt=""></a>
+            <div class="links">
+                <span class="close_menue" onclick="Open_colose_menu()">
+                    <i class="fa-solid fa-x"></i>
+                    </i></span>
+                <a href="./index.html" onclick="close_nav()" class="logo"><img src="./imgs/logo_min.png" alt=""></a>
+                <a href="./index.html" onclick="close_nav()" class="link-nav">Home</a>
+                <a href="./Portfolio.html" onclick="close_nav()" class="link-nav">Portfolio</a>
+                <a href="#about" onclick="close_nav()" class="link-nav">About</a>
+                <a href="#services" onclick="close_nav()" class="link-nav">Services</a>
+                <a href="#projects" onclick="close_nav()" class="link-nav">projects</a>
+                <a href="#contact" onclick="close_nav()" class="link-nav">Contact</a>
+            </div>
+            <div class="icons">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100040317048909&locale=ar_AR">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/weal.yossef/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://wa.link/u33dav"><i class="fa-brands fa-whatsapp"></i></a>
+                <a target="_blank" href="https://www.behance.net/yossefweal"><i class="fa-brands fa-behance"></i></a>
+                <span class="icon_menue" onclick="Open_colose_menu()">
+                    <i class="fa-solid fa-bars-staggered">
+                    </i></span>
+            </div>
+        </nav>
+    </header>
+    <div id="Home" class="hero">
+        <div class="container">
+            <div data-aos="fade-up-right" class="div_TexT">
+                <h4>Hello i'm</h4>
+                <h1><span>Yossef Weal</span></h1>
+                <h2>Front End Specialist</h2>
+                <p>Front-end specialist like UI / UX Designe or implementation using WordPress or HTML & CSS &
+                    JavaScript & Bootstrap.</p>
+                <div class="btns">
+                    <a href="#contact" class="btn">Hire me</a>
+                    <a href="#" download class="btn_no_bg">Download CV</a>
+                </div>
+            </div>
+            <div data-aos="fade-up-left" class="div_img">
+                <img class="person" src="./imgs/hero2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <section data-aos="fade-up" data-aos-duration="3000" id="about" class="about">
+        <div class="container">
+            <div class="div_text">
+                <h5>About me</h5>
+                <h2><span>I'm Yossef Weal</span></h2>
+                <h4>I'm UI / UX Designes and WordPress Development and Front-end Development</h4>
+                <p>I am very interested in UI and UX experience to help companies and individuals develop applications
+                    and websites.
+                </p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> WordPress Development</li>
+                    <li><i class="fa-solid fa-check"></i> UI / UX Designer</li>
+                    <li><i class="fa-solid fa-check"></i> Front-end Development</li>
+                </ul>
+                <a href="#" download class="btn">Download CV</a>
+            </div>
+            <div class="div_img">
+                <img src="./imgs/about.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="top_sc">
+                <h2>Our <span>Services</span></h2>
+            </div>
+            <div class="boxs">
+                <div data-aos="zoom-out-down" class="box">
+                    <div class="lottele-div">
+                        <dotlottie-player src="https://lottie.host/fde77cda-b6db-4731-b700-697bf5f5609d/nqRpLWwmCF.json"
+                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+                            autoplay></dotlottie-player>
+                    </div>
+                    <h3>Wep Design</h3>
+                    <p>Using Figma with the best performance for designing websites and applications at the present
+                        time.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div data-aos="zoom-out-down" class="box">
+                    <div class="lottele-div">
+                        <dotlottie-player src="https://lottie.host/c438a018-5bf3-4871-b45c-4a687d70f08b/59pLkBXJN0.json"
+                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+                            autoplay></dotlottie-player>
+                    </div>
+                    <h3>Performance speed</h3>
+                    <p>Enjoy a fast and smooth browsing experience and get the best results in search engines (SEO)</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div data-aos="zoom-out-down" class="box">
+                    <div class="lottele-div">
+                        <dotlottie-player src="https://lottie.host/e29156b2-f3d9-4d62-9814-589411384da9/ICcImy9bU9.json"
+                            background="transparent" speed="1"
+                            style="width: 300px; height: 300px; stroke: var(--main_color);" loop
+                            autoplay></dotlottie-player>
+                    </div>
+                    <h3>Front-end Development</h3>
+                    <p>A website interface that was created specifically for you without any restrictions. You need
+                        Front-end Development.
+                    </p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="top_sc">
+                <h2>Explore my popular <span>Projects</span></h2>
+            </div>
+            <div class="projec_box">
+                <iframe style="scale: 1.1; width: 45%;" data-aos="fade-up-right"
+                    src="https://www.behance.net/embed/project/209537161?ilo0=1" height="316" width="404"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin"></iframe>
+                <div data-aos="fade-up-left" class="text">
+                    <h4><span>UI / UX Designe</span></h4>
+                    <a target="_blank"
+                        href="https://www.behance.net/gallery/203985407/Designing-a-home-furniture-store-application">Restaurant
+                        website menu page</a>
+                    <p>The design provides a unique and enjoyable experience for the user and makes it easy for him to
+                        use, purchase and browse
+                        dishes and meals.</p>
+                    <a target="_blank"
+                        href="https://www.behance.net/gallery/203985407/Designing-a-home-furniture-store-application"
+                        class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+            <div class="projec_box projec_box_2">
+                <iframe data-aos="fade-up-left" style="scale: 1.1; width: 45%;"
+                    src="https://www.behance.net/embed/project/209259147?ilo0=1" height="316" width="404"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin"></iframe>
+                <div data-aos="fade-up-right" class="text">
+                    <h4><span>UI / UX Designe</span></h4>
+                    <a target="_blank" href="https://www.behance.net/gallery/209259147/Weather-app">Designing
+                        a Weather application</a>
+                    <p>The design provides a unique and enjoyable experience for the user and makes it easy for him to
+                        know the weather and
+                        more information about the weather.</p>
+                    <a target="_blank" href="https://www.behance.net/gallery/209259147/Weather-app" class="link"><i
+                            class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+            <div class="projec_box">
+                <iframe style="scale: 1.1; width: 45%;" data-aos="fade-up-right"
+                    src="https://www.behance.net/embed/project/203985407?ilo0=1" height="316" width="404"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin"></iframe>
+                <div data-aos="fade-up-left" class="text">
+                    <h4><span>UI / UX Designe</span></h4>
+                    <a target="_blank"
+                        href="https://www.behance.net/gallery/203985407/Designing-a-home-furniture-store-application">Designing
+                        a home furniture store application</a>
+                    <p>The design provides a special and enjoyable experience for the user and makes it easy for him to
+                        use, purchase and
+                        browse products.</p>
+                    <a target="_blank"
+                        href="https://www.behance.net/gallery/203985407/Designing-a-home-furniture-store-application"
+                        class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+            <div class="projec_box projec_box_2">
+                <img data-aos="fade-up-left" src="./imgs/project4.png" alt="">
+                <div data-aos="fade-up-right" class="text">
+                    <h4><span>WordPress</span></h4>
+                    <a target="_blank" href="https://mindtive.net/">Design and implement a website using WordPress</a>
+                    <p>Design and implementation of mindtive Company website using WordPress without using paid themes.
+                    </p>
+                    <a target="_blank" href="https://mindtive.net/" class="link"><i
+                            class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+            <div class="projec_box">
+                <img data-aos="fade-up-right" src="./imgs/project3.png" alt="">
+
+                <div data-aos="fade-up-left" class="text">
+                    <h4><span>UI / UX Designe & WordPress</span></h4>
+                    <a target="_blank" href="https://www.3a-d.com/"> Design and implement a website using WordPress</a>
+                    <p>Design and implementation of 3A Digital Company website using WordPress without using
+                        paid themes.</p>
+                    <a target="_blank" href="https://www.3a-d.com/" class="link"><i
+                            class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+            <div style="margin-bottom: -120px;" class="projec_box projec_box_2">
+                <iframe style="scale: 1.1; width: 45%;" data-aos="fade-up-left"
+                    src="https://www.behance.net/embed/project/198402163?ilo0=1" height="316" width="404"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin"></iframe>
+                <div data-aos="fade-up-right" class="text">
+                    <h4><span>UI / UX Designe</span></h4>
+                    <a target="_blank"
+                        href="https://www.behance.net/gallery/198402163/Design-a-landing-page-for-healthy-">Design a
+                        landing page for healthy foods.
+                    </a>
+                    <p>The design provides a special and enjoyable experience for the user and makes it easy for him to
+                        use, purchase and
+                        browse products.</p>
+                    <a target="_blank"
+                        href="https://www.behance.net/gallery/198402163/Design-a-landing-page-for-healthy-foods"
+                        class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="top_sc">
+            <h2>Contact <span>Me</span></h2>
+        </div>
+        <div class="container">
+            <div data-aos="fade-down-right" class="soshel-contect">
+                <h2>Follow Me</h2>
+                <div class="links">
+                    <a target="_blank" href="mailto:yweal423@gmail.com.net"><i
+                            class="fa-solid fa-envelope"></i>E-mail</a>
+                    <a target="_blank" href="tel:+201212476207"><i class="fa-solid fa-phone-volume"></i>Phone :
+                        01212476207</a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100040317048909&locale=ar_AR"><i
+                            class="fa-brands fa-facebook-f"></i>Facebook</a>
+                    <a target="_blank" href="https://www.instagram.com/weal.yossef/"><i
+                            class="fa-brands fa-instagram"></i>Instagram</a>
+                    <a target="_blank" href="https://wa.link/u33dav"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+                    <a target="_blank" href="https://www.behance.net/yossefweal"><i
+                            class="fa-brands fa-behance"></i>Behance</a>
+                </div>
+            </div>
+            <form data-aos="fade-down-left" method="post"
+                action="https://api.sheetmonkey.io/form/rqriycmiVXAkwz5V57pPvE">
+                <div class="inpts_forms">
+                    <input type="text" placeholder="Full name" name="name" required>
+                    <input type="text" placeholder="E-mail" name="mail" required>
+                    <input type="text" placeholder="Phone number" name="phone" required>
+                    <input type="text" placeholder="Subject" name="subject">
+                    <textarea name="massege" id="" rows="10" placeholder="Your massege Here..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Massege</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="copyReat">
+            <img src="./imgs/logo_rades.png" alt="">
+
+            <p>All rights reserved to Yossef Weal.</p>
+        </div>
+        <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100040317048909&locale=ar_AR"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/weal.yossef/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.link/u33dav"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.behance.net/yossefweal"><i class="fa-brands fa-behance"></i></a>
+        </div>
+    </footer>
+
+
+    <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js-file/main.js" defer></script>
+
+</body>
+
+</html>
+<!-- 
+<div class="" style="justify-content: center; display: flex;"></div>
+<div class="" style="width: 75%;"></div>
+<style>
+    .search_div {
+        width: 100% !important;
+    }
+
+    .search_div {
+        width: 75%;
+    }
+</style>
+<style>
+    .filter_search {
+        background: linear-gradient(326deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(https://saudiauto.com.sa/wp-content/uploads/2024/12/5bf11546-89d8-4c30-af29-4f8269591638.jpg)no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        h2 {
+            background-color: #0000005c !important;
+            padding: 8px !important;
+            font-family: sans-serif;
+        }
+
+        .filter-form {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff5c;
+            padding: 20px;
+
+
+            .form-control {
+                width: 200px;
+                background-color: #00000082;
+                color: white;
+                border: none;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+
+            .div {
+                margin-top: 0 !important;
+            }
+
+            /* btn بحث */
+            .btn {
+                width: 100px;
+                background-color: #f70d28;
+                color: white;
+                border: none;
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .filter-form {
+            flex-wrap: wrap;
+
+            .form-control {
+                margin-bottom: 10px;
+                width: 95% !important;
+            }
+        }
+
+        .filter_search {
+            & .filter-form {
+                .btn {
+                    width: 95% !important;
+                }
+            }
+        }
+    }
+</style> -->
