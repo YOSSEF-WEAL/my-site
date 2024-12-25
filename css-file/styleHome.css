@@ -38,10 +38,12 @@ body {
   .scund {
     width: 100%;
     padding: 10px;
+    flex-direction: row !important;
+    flex-wrap: wrap;
     .item {
       border-radius: 5px;
       padding: 15px;
-      width: 100%;
+      width: 49%;
       background: rgb(0 0 0 / 30%);
       transition: 0.3s ease-in-out;
 
@@ -66,5 +68,11 @@ body {
 @media (max-width: 500px) {
   .contentCard {
     width: 99%;
+  }
+  .item {
+    width: 100% !important;
+  }
+  .scund {
+    padding: 0px;
   }
 }
