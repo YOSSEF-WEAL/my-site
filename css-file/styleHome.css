@@ -68,6 +68,7 @@ body {
 @media (max-width: 500px) {
   .contentCard {
     width: 99%;
+      margin-bottom: 30px;
   }
   .item {
     width: 100% !important;
