@@ -24,6 +24,7 @@ a {
   --bg-lines: rgb(255, 255, 255, 0.05);
   --img-shado: 0px 0px 47px -9px rgb(163 163 163 / 87%);
   --svg-bg: #fff;
+  --linear-gradient: linear-gradient(90deg, #4ad493, #007374);
 }
 
 .dark_mood {
@@ -238,8 +239,9 @@ header {
 }
 
 .active {
-  background: var(--black_color);
   border-bottom: 1px solid #56565697;
+  background: rgb(15 40 47 / 50%);
+  backdrop-filter: blur(30px);
 }
 
 header nav {
@@ -353,20 +355,26 @@ header nav .icons a:hover {
 /* start About sc*/
 
 .about .container {
-  background: var(--black_color);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  background: var(--linear-gradient);
 }
 
 .about .div_text {
   width: 50%;
   margin: 30px 0;
+
+  a {
+    background-color: var(--background-body);
+    color: var(--white_color);
+    font-weight: 500;
+  }
 }
 
 .about .div_text h5 {
-  color: var(--p_color);
+  color: var(--black_color);
   font-size: 18px;
   text-transform: capitalize;
 }
@@ -374,21 +382,25 @@ header nav .icons a:hover {
 .about .div_text h2 {
   font-size: 45px;
   margin: 45px 0 5px;
+  span {
+    color: var(--background-body);
+  }
 }
 
 .about .div_text h4 {
   font-size: 30px;
   margin-bottom: 20px;
-  color: var(--white_color);
+  color: var(--black_color);
 }
 
 .about .div_text p {
   line-height: 1.8;
+  color: var(--bg_color);
 }
 
 .about .div_text ul {
   display: flex;
-  color: var(--white_color);
+  color: var(--background-body);
   margin: 30px 0 20px;
   flex-wrap: wrap;
 }
@@ -402,7 +414,7 @@ header nav .icons a:hover {
 }
 
 .about .div_text ul li i {
-  color: var(--main_color);
+  color: var(--linear-gradient);
   font-size: 20px;
 }
 
@@ -619,6 +631,7 @@ dotlottie-player
   margin-bottom: 30px;
   border: 1px solid var(--border-color);
   transition: 0.4s;
+  font-size: 15px;
 }
 
 .contact form .inpts_forms input {
