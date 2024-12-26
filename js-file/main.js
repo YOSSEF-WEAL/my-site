@@ -20,10 +20,10 @@ window.onscroll = function ()
 {
     if (this.scrollY >= 50)
     {
-        heder.classList.add("active");
+        heder.classList.add("activeHeader");
     } else
     {
-        heder.classList.remove("active");
+        heder.classList.remove("activeHeader");
     }
 
     if (this.scrollY >= 100)
@@ -94,5 +94,3 @@ window.addEventListener('load', () =>
         spinner.style.display = 'none';
     }, 100);
 })
-
-
