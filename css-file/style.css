@@ -238,7 +238,7 @@ header {
   z-index: 999;
 }
 
-.active {
+.activeHeader {
   border-bottom: 1px solid #56565697;
   background: rgb(15 40 47 / 50%);
   backdrop-filter: blur(30px);
