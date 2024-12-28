@@ -27,20 +27,6 @@ a {
   --linear-gradient: linear-gradient(90deg, #4ad493, #007374);
 }
 
-.dark_mood {
-  /* --main_color: #00bf63; */
-  --main_color: #4ad493;
-  --p_color: #000;
-  --bg_color: #ffffff;
-  --white_color: #000000;
-  --black_color: #ffffff;
-  --border-color: #000000dd;
-  --background-body: #eaeaea;
-  --bg-lines: rgb(0 0 0 / 10%);
-  --img-shado: 0px 0px 47px -9px rgba(0, 0, 0, 0.41);
-  --svg-bg: #000;
-}
-
 #theme_switch {
   height: 50px;
   width: 50px;
@@ -283,9 +269,17 @@ header nav .icons {
 }
 
 header nav .icons a {
-  color: var(--main_color);
-  font-size: 28px;
+  color: #ffffff;
+  font-size: 20px;
   transition: 0.3s;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(127deg, #4ad493, #007374);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50px;
 }
 
 header nav .icons a:hover {
@@ -713,15 +707,16 @@ header .icon_menue {
   header nav .links {
     position: fixed;
     flex-direction: column;
-    background: var(--black_color);
+    background: var(--background-body);
     top: 0;
     left: -400px;
     padding: 50px 0;
-    height: 100%;
-    border-right: 1px solid var(--border-color);
     text-align: center;
     width: 400px;
     transition: 0.5s ease-in-out;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    height: 100vh;
   }
 
   header nav .links.active {
@@ -730,10 +725,20 @@ header .icon_menue {
 
   .close_menue {
     display: block;
-    font-size: 28px;
     position: absolute;
     top: 30px;
     right: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    transition: 0.3s;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(127deg, #4ad493, #007374);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50px;
   }
 
   header .links .logo {
@@ -745,10 +750,24 @@ header .icon_menue {
   .logo_ph {
     display: block;
   }
-
+  header nav .logo img {
+    width: 80px;
+  }
   header .icon_menue {
-    display: block;
-    font-size: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(127deg, #4ad493, #007374);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50px;
+  }
+  header .icon_menue:hover {
+    scale: 1.1;
   }
 
   /*Hero sc*/
@@ -858,6 +877,11 @@ header .icon_menue {
 @media (max-width: 500px) {
   header nav .icons a {
     font-size: 20px;
+    display: none;
+  }
+
+  header nav .icons a:hover {
+    scale: 1.1;
   }
 
   header nav .icons {
@@ -869,8 +893,12 @@ header .icon_menue {
     width: 70px;
   }
 
-  header nav .links.active {
+  header nav .links {
     width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    border-right: none;
+    height: auto;
+    z-index: 9999;
   }
 
   header nav .links.active img {
@@ -878,8 +906,20 @@ header .icon_menue {
   }
 
   header .icon_menue {
-    margin-left: 5px;
-    font-size: 25px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(127deg, #4ad493, #007374);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50px;
+  }
+  header .icon_menue:hover {
+    scale: 1.1;
   }
 
   .close_menue {
