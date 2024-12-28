@@ -59,30 +59,6 @@ function removeAOSLinkOnMobile()
 window.addEventListener('load', removeAOSLinkOnMobile);
 window.addEventListener('resize', removeAOSLinkOnMobile);
 
-// start dark mode
-let darkmode = localStorage.getItem('darkmode');
-const theme_switch = document.getElementById("theme_switch");
-
-const enableDakmode = () =>
-{
-    document.body.classList.add("dark_mood");
-    localStorage.setItem("darkmode", "active");
-}
-
-const disableDakmode = () =>
-{
-    document.body.classList.remove("dark_mood");
-    localStorage.setItem("darkmode", "inactive");
-}
-
-if (darkmode === "active") enableDakmode();
-
-theme_switch.addEventListener("click", () =>
-{
-    darkmode = localStorage.getItem("darkmode");
-    darkmode !== "active" ? enableDakmode() : disableDakmode();
-});
-
 
 // Spinner
 const spinner = document.querySelector('.spinner-wrapper')
