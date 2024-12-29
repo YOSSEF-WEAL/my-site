@@ -1050,8 +1050,7 @@ header .icon_menue {
     flex-direction: column;
     gap: 30px;
   }
-
-  .projects .projec_box.projec_box_2 {
+  .projects .projec_box:nth-child(2n) {
     flex-direction: column;
   }
 
