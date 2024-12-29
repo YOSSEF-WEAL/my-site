@@ -299,6 +299,7 @@ header nav .icons a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
 }
 
 .hero .div_TexT {
@@ -332,11 +333,13 @@ header nav .icons a:hover {
 }
 
 .hero .div_img {
-  width: 40%;
+  width: 50%;
   position: relative;
-  border-radius: 600px;
   overflow: hidden;
-  box-shadow: var(--img-shado);
+}
+.hero .div_img .person {
+  background: linear-gradient(127deg, #4ad493, #007374);
+  border-radius: 10px;
 }
 
 .hero .div_img .bg_img {
@@ -499,6 +502,9 @@ dotlottie-player
   justify-content: space-between;
   margin-bottom: 50px;
 }
+.projects .projec_box:nth-child(2n) {
+  flex-direction: row-reverse;
+}
 
 .projects .projec_box img {
   width: 45%;
@@ -558,6 +564,18 @@ dotlottie-player
 .projects .projec_box.projec_box_2 {
   flex-direction: row-reverse;
 }
+.more {
+  width: 100%;
+  height: 85px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -110px;
+  font-size: 22px;
+  background: linear-gradient(180deg, rgba(74, 212, 147, 0) 0%, #007374 100%);
+  border-radius: 50px;
+}
 
 /* STARTE CONTACT SC  */
 
@@ -572,6 +590,7 @@ dotlottie-player
 
 .contact .soshel-contect {
   width: 30%;
+  margin-top: -85px;
 }
 
 .contact .soshel-contect h2 {
@@ -585,11 +604,17 @@ dotlottie-player
 }
 
 .contact .soshel-contect .links a {
-  color: var(--white_color);
-  font-size: 20px;
   margin-bottom: 25px;
   position: relative;
   left: 0;
+  color: #ffffff;
+  font-size: 20px;
+  background: linear-gradient(-130deg, #4ad493, #007374);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50px;
   transition: 0.4s;
 }
 
@@ -598,7 +623,7 @@ dotlottie-player
 }
 
 .contact .soshel-contect .links i {
-  color: var(--main_color);
+  color: #fff;
   margin-right: 20px;
   font-size: 25px;
 }
@@ -772,7 +797,7 @@ header .icon_menue {
 
   /*Hero sc*/
   .hero {
-    height: 70vh;
+    height: 80vh;
   }
 
   .hero .div_TexT h4 {
@@ -800,6 +825,7 @@ header .icon_menue {
     flex-direction: column-reverse;
     width: 100%;
     margin-bottom: 20px;
+    gap: 30px;
   }
 
   .hero .div_TexT {
@@ -857,6 +883,7 @@ header .icon_menue {
 
   .contact .soshel-contect {
     width: 100%;
+    margin-top: 0px;
   }
 
   .contact .soshel-contect .links {
@@ -928,7 +955,7 @@ header .icon_menue {
 
   /*Hero sc*/
   .hero {
-    height: 70vh;
+    height: 85vh;
   }
 
   .hero .div_TexT h4 {
@@ -948,7 +975,7 @@ header .icon_menue {
   }
 
   .hero .div_img {
-    width: 50%;
+    width: 90%;
   }
 
   /*about sc*/
@@ -1072,7 +1099,6 @@ header .icon_menue {
   right: -50px;
   width: 50px;
   height: 50px;
-  background-color: var(--main_color);
   color: var(--white_color);
   font-size: 30px;
   padding: 5px;
@@ -1084,6 +1110,8 @@ header .icon_menue {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   opacity: 0.8;
+  background: linear-gradient(127deg, #4ad493, #007374);
+  border-radius: 50px;
 }
 
 .visible {
