@@ -510,10 +510,10 @@ dotlottie-player
   width: 45%;
   border-radius: 10px;
   transition: 0.4s ease-in-out;
-  box-shadow: var(--img-shado);
 }
 
 .projects .projec_box img:hover {
+  box-shadow: var(--img-shado);
   scale: 1.08;
 }
 
@@ -734,7 +734,7 @@ header .icon_menue {
     flex-direction: column;
     background: var(--background-body);
     top: 0;
-left: -101%;
+    left: -101%;
     padding: 50px 0;
     text-align: center;
     width: 400px;
@@ -797,7 +797,7 @@ left: -101%;
 
   /*Hero sc*/
   .hero {
- height: 95vh;
+    height: 95vh;
   }
 
   .hero .div_TexT h4 {
