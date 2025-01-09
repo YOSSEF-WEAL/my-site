@@ -284,6 +284,7 @@ header nav .icons a {
 
 header nav .icons a:hover {
   scale: 1.3;
+  background: linear-gradient(30deg, #4ad493, #007374);
 }
 
 /* start hero sc */
@@ -683,13 +684,18 @@ footer {
   justify-content: space-between;
   padding: 30px;
   border-top: 2px solid var(--border-color);
-  background: var(--black_color);
+  background: linear-gradient(170deg, #4ad493, #007374);
 }
 
 .copyReat {
   display: flex;
   align-items: center;
   gap: 10px;
+  p {
+    font-size: 18px;
+    color: var(--background-body);
+    font-weight: 500;
+  }
 }
 
 .copyReat img {
@@ -703,14 +709,29 @@ footer .icons {
   gap: 20px;
   justify-content: flex-end;
 }
+footer .icons a {
+  color: #ffffff;
+  font-size: 20px;
+  transition: 0.3s;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(115deg, #4ad493, #007374);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50px;
+  border: 3px solid;
+}
 
-footer .icons i {
+/* footer .icons i {
   color: var(--main_color);
   font-size: 28px;
   transition: 0.4s;
-}
+} */
 
-footer .icons i:hover {
+footer .icons a:hover {
+  background: linear-gradient(30deg, #4ad493, #007374);
   scale: 1.3;
 }
 
