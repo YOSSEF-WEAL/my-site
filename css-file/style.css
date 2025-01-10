@@ -681,10 +681,11 @@ dotlottie-player
 /* start footer  */
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 30px;
   border-top: 2px solid var(--border-color);
   background: linear-gradient(170deg, #4ad493, #007374);
+  gap: 20%;
 }
 
 .copyReat {
@@ -724,11 +725,6 @@ footer .icons a {
   border: 3px solid;
 }
 
-/* footer .icons i {
-  color: var(--main_color);
-  font-size: 28px;
-  transition: 0.4s;
-} */
 
 footer .icons a:hover {
   background: linear-gradient(30deg, #4ad493, #007374);
