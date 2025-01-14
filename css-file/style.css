@@ -70,7 +70,7 @@ a {
 }
 
 body {
-  background: var(--background-body);
+  background: var(--background-body) !important;
 }
 
 .container {
@@ -519,14 +519,18 @@ dotlottie-player
 }
 
 .projects .projec_box .text {
-  /* margin-left: 100px; */
   width: calc(50% - 80px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .projects .projec_box .text h4 {
   font-size: 20px;
-  margin-bottom: 20px;
   font-weight: normal;
+}
+.projects .projec_box .text a:hover {
+  color: var(--main_color);
 }
 
 .projects .projec_box .text a {
@@ -535,14 +539,12 @@ dotlottie-player
   transition: 0.4s;
 }
 
-.projects .projec_box .text a:hover {
+.projects .projec_box .text p {
+  line-height: 1.8;
+}
+.projects .projec_box .text .link:hover {
   color: var(--main_color);
   scale: 1.08;
-}
-
-.projects .projec_box .text p {
-  margin: 30px 0 50px;
-  line-height: 1.8;
 }
 
 .projects .projec_box .text .link {
@@ -725,6 +727,11 @@ footer .icons a {
   border: 3px solid;
 }
 
+/* footer .icons i {
+  color: var(--main_color);
+  font-size: 28px;
+  transition: 0.4s;
+} */
 
 footer .icons a:hover {
   background: linear-gradient(30deg, #4ad493, #007374);
