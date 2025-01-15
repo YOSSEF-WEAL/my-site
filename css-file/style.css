@@ -1146,7 +1146,10 @@ header .icon_menue {
 
   /*contact sc*/
   .contact .soshel-contect .links a {
-    width: 48%;
+    width: 47%;
+    i {
+      margin-right: 10px;
+    }
   }
 
   footer {
