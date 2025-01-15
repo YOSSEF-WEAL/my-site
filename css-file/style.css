@@ -9,6 +9,62 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Loding */
+.spinner-wrapper {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 65464;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  .terminal-loader {
+    scale: 1.3;
+  }
+}
+/* From Uiverse.io by aryamitra06 */
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: 0.25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+/* Loding */
+
 a {
   text-decoration: none !important;
 }
@@ -592,8 +648,7 @@ dotlottie-player
 }
 
 .contact .soshel-contect {
-  width: 30%;
-  margin-top: -85px;
+  width: 35%;
 }
 
 .contact .soshel-contect h2 {
@@ -603,13 +658,13 @@ dotlottie-player
 
 .contact .soshel-contect .links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 .contact .soshel-contect .links a {
-  margin-bottom: 25px;
-  position: relative;
-  left: 0;
   color: #ffffff;
   font-size: 20px;
   background: linear-gradient(-130deg, #4ad493, #007374);
@@ -617,12 +672,14 @@ dotlottie-player
   align-items: center;
   justify-content: center;
   padding: 20px;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: 0.4s;
+  width: 48%;
+  transition: 0.3s ease-in-out;
 }
 
 .contact .soshel-contect .links a:hover {
-  left: 20px;
+  background: linear-gradient(171deg, #4ad493, #007374);
 }
 
 .contact .soshel-contect .links i {
@@ -1151,59 +1208,3 @@ header .icon_menue {
     scale: 0.8;
   }
 }
-
-/* Loding */
-.spinner-wrapper {
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 65464;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
-  .terminal-loader {
-    scale: 1.3;
-  }
-}
-/* From Uiverse.io by aryamitra06 */
-.loader {
-  display: flex;
-  align-items: center;
-}
-
-.bar {
-  display: inline-block;
-  width: 3px;
-  height: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  animation: scale-up4 1s linear infinite;
-}
-
-.bar:nth-child(2) {
-  height: 35px;
-  margin: 0 5px;
-  animation-delay: 0.25s;
-}
-
-.bar:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-@keyframes scale-up4 {
-  20% {
-    background-color: #ffff;
-    transform: scaleY(1.5);
-  }
-
-  40% {
-    transform: scaleY(1);
-  }
-}
-/* Loding */
