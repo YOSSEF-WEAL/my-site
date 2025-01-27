@@ -1196,6 +1196,8 @@ header .icon_menue {
   opacity: 0.8;
   background: linear-gradient(127deg, #4ad493, #007374);
   border-radius: 50px;
+    border: 3px solid #fff;
+
 }
 
 .visible {
