@@ -36,8 +36,7 @@ async function fetchPosts()
                     <div  class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a target="_blank" href="${projectLink}">${post.title.rendered}</a>
-                        <p>${post.excerpt.rendered}</p>
-
+                        ${post.excerpt.rendered}
                         <a target="_blank" href="${projectLink}" class="link"><i
                                 class="fa-solid fa-arrow-up"></i></a>
                     </div>
