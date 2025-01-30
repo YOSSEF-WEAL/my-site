@@ -21,6 +21,78 @@
     <style>
         .top_sc {
             margin-top: 50px;
+            margin-bottom: 50px !important;
+        }
+
+        .filterDiv {
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            margin-bottom: 50px;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(74, 212, 147, 0) 0%, #007374 100%);
+            padding-block: 20px;
+            border-radius: 50px;
+
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            width: fit-content;
+        }
+
+        .labelFilter {
+            display: flex;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+            align-items: center;
+        }
+
+        .checkFilter {
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .checkFilter:checked {
+            background: linear-gradient(127deg, #4ad493, #007374);
+            border-color: #4ad493;
+        }
+
+        .checkFilter:checked::before {
+            content: "✔";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: white;
+        }
+
+        @media (max-width: 1000px) {
+            .filterDiv {
+                flex-direction: column;
+                padding: 25px 50px;
+                border-radius: 20px;
+                gap: 20px;
+
+                .filters {
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .labelFilter {
+                        width: 100%;
+                    }
+                }
+            }
         }
     </style>
 
@@ -82,7 +154,11 @@
             <div class="top_sc">
                 <h2>Explore my popular <span>Projects</span></h2>
             </div>
-            <div class="countriess" style="display: flex; flex-direction: column-reverse;">
+            <div class="filterDiv">
+                <h2>Filter :</h2>
+                <div class="filters"></div>
+            </div>
+            <div class="countriess" style="display: flex; flex-direction: column;">
             </div>
         </div>
         </div>
