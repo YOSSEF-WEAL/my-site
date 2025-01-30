@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Yossef Weal</title>
+    <!-- meta wep start -->
+    <meta name="description" content="Yossef Weal Projects">
+    <meta property="og:title" content="This is the official website of Yossef Wael.">
+    <!-- meta wep end -->
+    <link rel="icon" href="./imgs/logo_rades.png">
+    <!-- file css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link class="Animation_Library" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css-file/style.css">
+    <script defer src="./js-file/thePostIDfetch.js"></script>
+</head>
+
+<body>
+    <style>
+        .top_sc {
+            margin-top: 50px;
+        }
+
+        .projec_box {
+            align-items: flex-start;
+
+            .imges {
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            .projec_box {
+                flex-direction: column-reverse !important;
+
+                .imges {
+                    img {
+                        width: 218% !important;
+                    }
+                }
+            }
+        }
+    </style>
+
+    <!-- Loding -->
+    <div class="spinner-wrapper">
+        <div class="loader">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <!-- Loding -->
+
+
+
+
+    <div class="bg-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <header>
+        <nav class="container">
+            <a href="./index.html" class="logo"><img src="./imgs/logo_min.png" alt=""></a>
+            <a href="./index.html" class="logo logo_ph"><img src="./imgs/logo_rades.png" alt=""></a>
+            <div class="links">
+                <span class="close_menue" onclick="Open_colose_menu()">
+                    <i class="fa-solid fa-x"></i>
+                    </i></span>
+                <a href="./Portfolio.html" onclick="close_nav()" class="logo"><img src="./imgs/logo_min.png" alt=""></a>
+                <a href="./Portfolio.html" onclick="close_nav()" class="link-nav">Home</a>
+                <a href="./Portfolio.html#about" onclick="close_nav()" class="link-nav">About</a>
+                <a href="./Portfolio.html#services" onclick="close_nav()" class="link-nav">Services</a>
+                <a href="./projects.html" onclick="close_nav()" class="link-nav">projects</a>
+                <a href="./Portfolio.html#contact" onclick="close_nav()" class="link-nav">Contact</a>
+            </div>
+            <div class="icons">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100040317048909&locale=ar_AR">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a target="_blank" href="https://www.instagram.com/weal.yossef/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://wa.link/u33dav"><i class="fa-brands fa-whatsapp"></i></a>
+                <a target="_blank" href="https://www.behance.net/yossefweal"><i class="fa-brands fa-behance"></i></a>
+                <span class="icon_menue" onclick="Open_colose_menu()">
+                    <i class="fa-solid fa-bars-staggered">
+                    </i></span>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="top_sc">
+                <!-- <h2>Post <span>Name</span></h2> -->
+            </div>
+            <div class="countriess" style="display: flex; flex-direction: column-reverse;">
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="copyReat">
+            <img src="./imgs/logo_rades.png" alt="">
+
+            <p>All rights reserved to Yossef Weal.</p>
+        </div>
+        <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100040317048909&locale=ar_AR"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/weal.yossef/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.link/u33dav"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.behance.net/yossefweal"><i class="fa-brands fa-behance"></i></a>
+        </div>
+    </footer>
+
+    <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js-file/main.js" defer></script>
+
+</body>
+
+</html>
