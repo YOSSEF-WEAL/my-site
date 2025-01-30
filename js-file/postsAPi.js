@@ -21,7 +21,7 @@ async function fetchPosts()
     try
     {
         const categoryMap = await fetchCategories();
-        const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=12`);
+        const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=50`);
         const data = await response.json();
 
         data.forEach(post =>
