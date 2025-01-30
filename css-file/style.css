@@ -512,7 +512,6 @@ header nav .icons a:hover {
 }
 
 .services .boxs .box p {
-  margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -546,11 +545,13 @@ dotlottie-player {
 dotlottie-player
 
 /* start progects */
+
 .projects .projec_box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+  transition: 0.3s ease-in-out;
 }
 
 .projec_box {
@@ -570,7 +571,7 @@ dotlottie-player
 }
 
 .projects .projec_box img:hover {
-  box-shadow: var(--img-shado);
+  box-shadow: 0px 0px 47px -9px rgb(73 212 147 / 25%);
   scale: 1.08;
 }
 
@@ -974,7 +975,7 @@ header .icon_menue {
   }
 
   .contact .soshel-contect .links a {
-   width: 48%;
+    width: 48%;
   }
 
   .contact form {
@@ -1196,8 +1197,7 @@ header .icon_menue {
   opacity: 0.8;
   background: linear-gradient(127deg, #4ad493, #007374);
   border-radius: 50px;
-    border: 3px solid #fff;
-
+  border: 3px solid #fff;
 }
 
 .visible {
