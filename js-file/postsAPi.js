@@ -42,7 +42,7 @@ async function fetchPosts()
                     <div class="links" style= "gap: 10px; display: flex;">
                         <a target="_blank" href="${projectLink}" class="link"><i
                                 class="fa-solid fa-arrow-up"></i></a>
-                        <a style="width: fit-content; font-size: 20px; padding: 10px 20px; gap: 17px; rotate: 0deg;" target="_blank" href="./post.html?id=${post.id}" class="link">Read More <i
+                        <a style="width: fit-content; font-size: 20px; padding: 10px 20px; gap: 17px; rotate: 0deg;" href="./post.html?id=${post.id}" class="link">Read More <i
                                 class="fa-solid fa-arrow-up"></i></a>
                     </div>
                     </div>
