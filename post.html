@@ -19,22 +19,36 @@
 
 <body>
     <style>
-        .top_sc {
-            margin-top: 50px;
+        .countriess {
+            position: relative;
+
+            .projec_box {
+                align-items: flex-start;
+
+                .imges {
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
 
-        .projec_box {
-            align-items: flex-start;
+        .stackyText {
+            position: fixed;
+            right: 71px;
+            top: 140px;
+            width: 40% !important;
+        }
 
-            .imges {
-                width: 45%;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                img {
-                    width: 100%;
-                }
+        @media (max-width: 1000px) {
+            .stackyText {
+                position: static !important;
+                width: 100% !important;
             }
         }
 
