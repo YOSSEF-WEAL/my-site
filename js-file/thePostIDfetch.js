@@ -70,3 +70,13 @@ async function fetchPosts()
 fetchPosts();
 
 
+window.addEventListener('scroll', function ()
+{
+    const textPost = document.querySelector('.projec_box .text');
+    if (window.scrollY >= 80)
+        textPost.classList.add("stackyText");
+    else
+        textPost.classList.remove("stackyText");
+});
+
+
