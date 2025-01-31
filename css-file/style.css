@@ -542,8 +542,70 @@ dotlottie-player {
   scale: 1.3;
 }
 
-dotlottie-player
-
+/* start skills */
+.skills {
+  .boxsSkills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    .boxSkill {
+      width: 22%;
+      padding: 35px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      transition: 0.4s ease-in-out;
+      cursor: pointer;
+      i,
+      svg {
+        font-size: 80px;
+        color: var(--white_color);
+      }
+      p {
+        font-size: 25px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.skills .boxSkill:hover {
+  background: linear-gradient(180deg, #4ad493, #007374);
+  border: 0px;
+  i,
+  svg,
+  p {
+    color: var(--background-body);
+  }
+}
+@media (max-width: 1000px) {
+  .skills {
+    .boxsSkills {
+      .boxSkill {
+        width: 45%;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .skills {
+    .boxsSkills {
+      .boxSkill {
+        width: 40%;
+        i,
+        svg {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+/* end skills */
 /* start progects */
 
 .projects .projec_box {
@@ -785,12 +847,6 @@ footer .icons a {
   border: 3px solid;
 }
 
-/* footer .icons i {
-  color: var(--main_color);
-  font-size: 28px;
-  transition: 0.4s;
-} */
-
 footer .icons a:hover {
   background: linear-gradient(30deg, #4ad493, #007374);
   scale: 1.3;
@@ -982,7 +1038,7 @@ header .icon_menue {
     margin-top: 10px;
     width: 100%;
   }
-    footer .icons {
+  footer .icons {
     width: 100%;
     align-items: center;
     justify-content: center;
