@@ -595,13 +595,14 @@ dotlottie-player {
 @media (max-width: 500px) {
   .skills {
     .boxsSkills {
+      gap: 20px;
       .boxSkill {
-        width: 40%;
+        width: 45%;
         i,
         svg {
           font-size: 50px;
         }
-             p {
+        p {
           font-size: 20px;
         }
       }
