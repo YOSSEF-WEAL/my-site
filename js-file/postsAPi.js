@@ -36,7 +36,7 @@ async function fetchPosts(selectedCategories = [])
             const projectLink = post.acf?.link_progect || "#";
             const excerptText = post.excerpt.rendered.replace(/<\/?[^>]+(>|$)/g, "");
             const words = excerptText.split(" ");
-            const truncatedExcerpt = words.length > 50 ? words.slice(0, 30).join(" ") + "..." : excerptText;
+            const truncatedExcerpt = words.length > 50 ? words.slice(0, 30).join(" ") + " ..." : excerptText;
             const html = `
                 <div class="projec_box ${postCategories.join(" , ")}">
                     <img src="${imageUrl}" alt="">
