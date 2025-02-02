@@ -24,7 +24,7 @@ async function fetchPosts(selectedCategories = [])
 
         data.forEach(post =>
         {
-            const postCategories = post.categories.map(catId => categoryMap[catId] || "غير معروف"); // تحويل IDs إلى أسماء فئات
+            const postCategories = post.categories.map(catId => categoryMap[catId] || "غير معروف");
 
             if (selectedCategories.length > 0 && !post.categories.some(catId => selectedCategories.includes(catId.toString())))
             {
@@ -36,13 +36,13 @@ async function fetchPosts(selectedCategories = [])
             const projectLink = post.acf?.link_progect || "#";
             const excerptText = post.excerpt.rendered.replace(/<\/?[^>]+(>|$)/g, "");
             const words = excerptText.split(" ");
-            const truncatedExcerpt = words.length > 50 ? words.slice(0, 30).join(" ") + " ..." : excerptText;
+            const truncatedExcerpt = words.length > 50 ? words.slice(0, 30).join(" ") + "..." : excerptText;
             const html = `
                 <div class="projec_box ${postCategories.join(" , ")}">
                     <img src="${imageUrl}" alt="">
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
-                        <a target="_blank" href="${projectLink}">${post.title.rendered}</a>
+                        <a target="_blank" href="./post.html?id=${post.id}">${post.title.rendered}</a>
                         <p>${truncatedExcerpt}</p>
                         <div class="links" style="gap: 10px; display: flex;">
                             <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
