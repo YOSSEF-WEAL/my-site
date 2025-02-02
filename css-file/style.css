@@ -303,7 +303,7 @@ header nav .logo img {
 
 header nav .links {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   border-bottom: none;
   background: none;
 }
@@ -313,10 +313,12 @@ header nav .links a {
   text-transform: capitalize;
   font-size: 18px;
   transition: 0.3s;
+  padding: 12px;
+  border-radius: 4px;
 }
 
 header nav .links a:hover {
-  color: var(--main_color);
+  background-color: rgb(67 181 128 / 50%);
 }
 
 header nav .icons {
@@ -1074,6 +1076,7 @@ header .icon_menue {
     border-right: none;
     height: auto;
     z-index: 9999;
+    gap: 10px;
   }
 
   header nav .links.active img {
