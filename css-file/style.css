@@ -127,6 +127,11 @@ a {
 
 body {
   background: var(--background-body) !important;
+    scroll-behavior: smooth;
+
+}
+body {
+  background: linear-gradient(90deg, #4ad493, #007374);
 }
 
 .container {
