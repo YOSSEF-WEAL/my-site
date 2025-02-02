@@ -42,7 +42,7 @@ async function fetchPosts(selectedCategories = [])
                     <img src="${imageUrl}" alt="">
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
-                        <a target="_blank" href="./post.html?id=${post.id}">${post.title.rendered}</a>
+                        <a href="./post.html?id=${post.id}">${post.title.rendered}</a>
                         <p>${truncatedExcerpt}</p>
                         <div class="links" style="gap: 10px; display: flex;">
                             <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
