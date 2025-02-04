@@ -42,7 +42,7 @@ async function fetchPosts(selectedCategories = [])
                     <img src="${imageUrl}" alt="">
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
-                        <a href="./post.html?id=${post.id}">${post.title.rendered}</a>
+                        <a target="_blank" href="./post.html?id=${post.id}">${post.title.rendered}</a>
                         <p>${truncatedExcerpt}</p>
                         <div class="links" style="gap: 10px; display: flex;">
                             <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
@@ -53,17 +53,42 @@ async function fetchPosts(selectedCategories = [])
                     </div>
                 </div>
             `;
-
+            const serchOfNameOption = `<option data-url="./post.html?id=${post.id}">${post.title.rendered}</option>`;
+            const projectNamsList = document.getElementById('projectNams');
+            projectNamsList.insertAdjacentHTML('beforeend', serchOfNameOption);
             countriesContainer.insertAdjacentHTML('beforeend', html);
+
+
         });
     } catch (error)
     {
         console.error(`❌ Error fetching posts: ${error}`);
     }
 }
+const nameSeach = document.querySelector('.nameSeach');
+const btnSeach = document.querySelector('.btnSeach');
+
+btnSeach.addEventListener('click', function (e)
+{
+    e.preventDefault();
+    const projectNamsList = document.getElementById('projectNams');
+    const selectedOption = Array.from(projectNamsList.options).find(option => option.value === nameSeach.value);
+    if (selectedOption)
+    {
+        const url = selectedOption.getAttribute('data-url');
+        if (url)
+        {
+            window.location.href = url;
+        }
+    } else
+    {
+        console.error('No matching option found.');
+    }
+});
+
+
 
 const filtersContainer = document.querySelector('.filters');
-
 async function renderCategoryFilters()
 {
     const categoryMap = await fetchCategories();
