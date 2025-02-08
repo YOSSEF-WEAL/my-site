@@ -39,13 +39,13 @@ async function fetchPosts(selectedCategories = [])
             const truncatedExcerpt = words.length > 50 ? words.slice(0, 30).join(" ") + "..." : excerptText;
             const html = `
                 <div class="projec_box ${postCategories.join(" , ")}">
-                    <img src="${imageUrl}" alt="">
+                    <img loading="lazy" src="${imageUrl}" alt="">
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a target="_blank" href="./post.html?id=${post.id}">${post.title.rendered}</a>
                         <p>${truncatedExcerpt}</p>
                         <div class="links" style="gap: 10px; display: flex;">
-                            <a href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                            <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
                             <a style="width: fit-content; font-size: 20px; padding: 10px 20px; gap: 17px; rotate: 0deg;" href="./post.html?id=${post.id}" class="link">Read More
                                 <i style="rotate: 45deg !important; scale: 1.5; !important" class="fa-solid fa-arrow-up"></i>
                             </a>
