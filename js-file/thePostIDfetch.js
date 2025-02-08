@@ -2,8 +2,6 @@ const params = new URLSearchParams(window.location.search);
 const postId = params.get("id");
 const countriesContainer = document.querySelector('.countriess');
 
-
-
 async function fetchCategories()
 {
     const response = await fetch("https://a3raff.com/Yossefprofile/wp-json/wp/v2/categories");
@@ -45,14 +43,13 @@ async function fetchPosts()
                         <div class='imges'>
             ${imageUrls.map((url) =>
         {
-            return `<img src="${url}" alt="">`;
+            return `<img loading="lazy" src="${url}" alt="">`;
         }).join('')}
             </div>
             <div class="text">
                 <h4><span>${postCategories.join(", ")}</span></h4>
                 <a target="_blank" href="${projectLink}">${data.title.rendered}</a>
-           
-          <p>      ${filteText(data.content.rendered)}</p>
+                <p>${filteText(data.content.rendered)}</p>
                 <div class="links" style="gap: 10px; display: flex;">
         <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
@@ -69,7 +66,6 @@ async function fetchPosts()
 }
 fetchPosts();
 
-
 window.addEventListener('scroll', function ()
 {
     const textPost = document.querySelector('.projec_box .text');
@@ -78,5 +74,3 @@ window.addEventListener('scroll', function ()
     else
         textPost.classList.remove("stackyText");
 });
-
-
