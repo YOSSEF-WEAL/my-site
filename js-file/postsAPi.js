@@ -1,119 +1,56 @@
 const countriesContainer = document.querySelector('.countriess');
 const renderSpinner = function (parintEl)
 {
-    const markup = `
-
+       const markup = `
 <style>
-    .spiner_loding{
-      width: 100%;
+.spiner_loding{
     display: flex;
+    align-items: center;
     justify-content: center;
-    }
-    .loader {
-        position: relative;
-        width: 54px;
-        height: 54px;
-        border-radius: 10px;
-    }
+}
+svg {
+ width: 3.25em;
+ transform-origin: center;
+ animation: rotate4 2s linear infinite;
+}
 
-    .loader div {
-        width: 8%;
-        height: 24%;
-        background: rgb(128, 128, 128);
-        position: absolute;
-        left: 50%;
-        top: 30%;
-        opacity: 0;
-        border-radius: 50px;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-        animation: fade458 1s linear infinite;
-    }
+circle {
+ fill: none;
+ stroke: #fff;
+ stroke-width: 2;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
+}
 
-    @keyframes fade458 {
-        from {
-            opacity: 1;
-        }
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
+}
 
-        to {
-            opacity: 0.25;
-        }
-    }
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
 
-    .loader .bar1 {
-        transform: rotate(0deg) translate(0, -130%);
-        animation-delay: 0s;
-    }
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
 
-    .loader .bar2 {
-        transform: rotate(30deg) translate(0, -130%);
-        animation-delay: -1.1s;
-    }
+ 100% {
+  stroke-dashoffset: -125px;
+ }
+}
 
-    .loader .bar3 {
-        transform: rotate(60deg) translate(0, -130%);
-        animation-delay: -1s;
-    }
-
-    .loader .bar4 {
-        transform: rotate(90deg) translate(0, -130%);
-        animation-delay: -0.9s;
-    }
-
-    .loader .bar5 {
-        transform: rotate(120deg) translate(0, -130%);
-        animation-delay: -0.8s;
-    }
-
-    .loader .bar6 {
-        transform: rotate(150deg) translate(0, -130%);
-        animation-delay: -0.7s;
-    }
-
-    .loader .bar7 {
-        transform: rotate(180deg) translate(0, -130%);
-        animation-delay: -0.6s;
-    }
-
-    .loader .bar8 {
-        transform: rotate(210deg) translate(0, -130%);
-        animation-delay: -0.5s;
-    }
-
-    .loader .bar9 {
-        transform: rotate(240deg) translate(0, -130%);
-        animation-delay: -0.4s;
-    }
-
-    .loader .bar10 {
-        transform: rotate(270deg) translate(0, -130%);
-        animation-delay: -0.3s;
-    }
-
-    .loader .bar11 {
-        transform: rotate(300deg) translate(0, -130%);
-        animation-delay: -0.2s;
-    }
-
-    .loader .bar12 {
-        transform: rotate(330deg) translate(0, -130%);
-        animation-delay: -0.1s;
-    }
 </style>
 <div class="spiner_loding">
-<div class="loader">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-    <div class="bar4"></div>
-    <div class="bar5"></div>
-    <div class="bar6"></div>
-    <div class="bar7"></div>
-    <div class="bar8"></div>
-    <div class="bar9"></div>
-    <div class="bar10"></div>
-    <div class="bar11"></div>
-    <div class="bar12"></div>
-</div>
+<svg viewBox="25 25 50 50">
+  <circle r="20" cy="50" cx="50"></circle>
+</svg>
 </div>
         `;
     parintEl.innerHTML = '';
