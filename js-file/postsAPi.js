@@ -1,7 +1,7 @@
 const countriesContainer = document.querySelector('.countriess');
 const renderSpinner = function (parintEl)
 {
-       const markup = `
+    const markup = `
 <style>
 .spiner_loding{
     display: flex;
@@ -179,4 +179,5 @@ async function renderCategoryFilters()
 }
 
 renderCategoryFilters();
-fetchPosts(); 
+fetchPosts();
+console.log('last update in git to githup');
