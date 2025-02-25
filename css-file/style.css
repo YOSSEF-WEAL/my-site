@@ -783,7 +783,7 @@ header nav .icons a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -110px;
+  margin-bottom: -50px;
   font-size: 22px;
   background: linear-gradient(180deg, rgba(74, 212, 147, 0) 0%, #007374 100%);
   border-radius: 50px;
