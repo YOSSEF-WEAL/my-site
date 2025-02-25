@@ -1196,9 +1196,8 @@ header .icon_menue {
 
   /*Hero sc*/
   .hero {
-    height: 50vh;
+    height: 65vh;
     background-position-y: -280px;
-    margin-bottom: 50px;
   }
 
   .hero .div_TexT h4 {
