@@ -620,7 +620,9 @@ header nav .icons a:hover {
     gap: 40px;
     flex-wrap: wrap;
     .boxSkill {
-      width: 22%;
+      width: 150px;
+      height: 150px;
+      border-radius: 500px;
       padding: 35px;
       display: flex;
       justify-content: center;
@@ -628,8 +630,7 @@ header nav .icons a:hover {
       align-items: center;
       gap: 30px;
       border: 2px solid var(--border-color);
-      border-radius: 10px;
-      transition: 0.4s ease-in-out;
+      transition: 0.4sease-in-out;
       cursor: pointer;
       i,
       svg {
@@ -639,6 +640,7 @@ header nav .icons a:hover {
       p {
         font-size: 25px;
         font-weight: 500;
+        display: none;
       }
     }
   }
@@ -652,24 +654,15 @@ header nav .icons a:hover {
     color: var(--background-body);
   }
 }
-@media (max-width: 1000px) {
-  .skills {
-    .boxsSkills {
-      .boxSkill {
-        width: 45%;
-      }
-    }
-  }
-}
+
 @media (max-width: 500px) {
   .skills {
     .boxsSkills {
       gap: 20px;
       .boxSkill {
-        width: 45%;
         i,
         svg {
-          font-size: 50px;
+          font-size: 60px;
         }
         p {
           font-size: 20px;
@@ -800,7 +793,7 @@ header nav .icons a:hover {
 }
 
 .contact .top_sc {
-  margin-bottom: 100px;
+  margin-bottom: 45px;
 }
 
 .contact .soshel-contect {
@@ -1263,10 +1256,6 @@ header .icon_menue {
 
   .top_sc h2 {
     font-size: 30px;
-  }
-
-  .top_sc {
-    margin-bottom: 50px !important;
   }
 
   /*projects sc*/
