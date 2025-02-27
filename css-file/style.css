@@ -650,6 +650,7 @@ header nav .icons a:hover {
       svg {
         font-size: 80px;
         color: var(--white_color);
+        transition: 0.3s ease-in-out;
       }
       p {
         font-size: 25px;
@@ -662,6 +663,10 @@ header nav .icons a:hover {
 .skills .boxSkill:hover {
   background: linear-gradient(180deg, #4ad493, #007374);
   border: 0px;
+  i,
+  svg {
+    scale: 1.2;
+  }
   i,
   svg,
   p {
