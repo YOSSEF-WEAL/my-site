@@ -519,8 +519,10 @@ header nav .icons a:hover {
       text-align: center;
       gap: 10px;
       .img-services {
+        transition: 0.3s ease-in-out;
         width: 90%;
       }
+
       .h2-services {
         font-size: 22px;
         font-weight: 600;
@@ -593,7 +595,19 @@ header nav .icons a:hover {
     grid-row-start: 9;
   }
 }
-
+.parent {
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7 {
+    .img-services:hover {
+      scale: 1.1;
+    }
+  }
+}
 @media (max-width: 750px) {
   .services {
     .parent {
@@ -660,6 +674,8 @@ header nav .icons a:hover {
     .boxsSkills {
       gap: 20px;
       .boxSkill {
+        height: 120px;
+        width: 120px;
         i,
         svg {
           font-size: 60px;
