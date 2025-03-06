@@ -75,8 +75,9 @@ async function fetchPosts(selectedCategories = [])
     {
         renderSpinner(countriesContainer);
         const categoryMap = await fetchCategories();
-        const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=50`);
+        const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=100`);
         const data = await response.json();
+        console.log(data);
 
         countriesContainer.innerHTML = '';
 
@@ -91,23 +92,31 @@ async function fetchPosts(selectedCategories = [])
 
 
             const imageUrl = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "No Image";
-            const projectLink = post.acf?.link_progect || "#";
+
+            const projectLink = post.acf?.link_progect || "";
+            const Design_link = post.acf?.Design_link || "";
+            const Repositories_link = post.acf?.Repositories_link || "";
+
+
             const excerptText = post.excerpt.rendered.replace(/<\/?[^>]+(>|$)/g, "");
             const words = excerptText.split(" ");
-            const truncatedExcerpt = words.length > 50 ? words.slice(0, 30).join(" ") + "..." : excerptText;
+            const truncatedExcerpt = words.length > 10 ? words.slice(0, 10).join(" ") + " ..." : excerptText;
+
+
             const html = `
-                <div class="projec_box ${postCategories.join(" , ")}">
+                <div class="projec_box" data-aos="fade-up">
                     <img loading="lazy" src="${imageUrl}" alt="">
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a href="./post.html?id=${post.id}">${post.title.rendered}</a>
                         <p>${truncatedExcerpt}</p>
-                        <div class="links" style="gap: 10px; display: flex;">
-                            <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
-                            <a style="width: fit-content; font-size: 20px; padding: 10px 20px; gap: 17px; rotate: 0deg;" href="./post.html?id=${post.id}" class="link">Read More
-                                <i style="rotate: 45deg !important; scale: 1.5; !important" class="fa-solid fa-arrow-up"></i>
-                            </a>
-                        </div>
+                         <div class="links">
+                    <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up"></i></a>
+                    <a target="_blank" href="${Repositories_link}" class="link "><i class="fa-brands fa-github"></i></a>
+                    <a target="_blank" href="${Design_link}" class="link"> <i class="fa-brands fa-behance"></i></a>
+                    </div>
+                    <a  href="./post.html?id=${post.id}" class="readMore">Read More</a>
+
                     </div>
                 </div>
             `;
@@ -115,9 +124,17 @@ async function fetchPosts(selectedCategories = [])
             const projectNamsList = document.getElementById('projectNams');
             projectNamsList.insertAdjacentHTML('beforeend', serchOfNameOption);
             countriesContainer.insertAdjacentHTML('beforeend', html);
-
-
         });
+
+        await document.querySelectorAll(".link").forEach((a) =>
+        {
+            if (a.href === window.location.href || a.href === `${window.location.href}#`)
+            {
+                a.style.display = 'none';
+            }
+        });
+
+
     } catch (error)
     {
         console.error(`❌ Error fetching posts: ${error}`);

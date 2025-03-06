@@ -3,7 +3,7 @@ const postId = params.get("id");
 const countriesContainer = document.querySelector('.countriess');
 const renderSpinner = function (parintEl)
 {
-     const markup = `
+    const markup = `
 <style>
 .spiner_loding{
     display: flex;
@@ -79,6 +79,8 @@ async function fetchPosts()
         const categoryMap = await fetchCategories();
         const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts/${postId}`);
         const data = await response.json();
+        // console.log(data);
+
         // ================== 
         const parser = new DOMParser();
         const doc = parser.parseFromString(data.content.rendered, 'text/html');
@@ -93,11 +95,18 @@ async function fetchPosts()
             return doc.body.textContent || "";
         };
 
+
+
+
         // ================== 
-        const projectLink = data.acf?.link_progect || "#";
+        const projectLink = data.acf?.link_progect || "";
+        const Design_link = data.acf?.Design_link || "";
+        const Repositories_link = data.acf?.Repositories_link || "";
+
         const postCategories = data.categories.map(catId => categoryMap[catId] || "غير معروف");
+
         const html = `
-            <div class="projec_box ${postCategories.join(" , ")}">
+            <div class="projec_box ">
                         <div class='imges'>
             ${imageUrls.map((url) =>
         {
@@ -108,15 +117,34 @@ async function fetchPosts()
                 <h4><span>${postCategories.join(", ")}</span></h4>
                 <a target="_blank" href="${projectLink}">${data.title.rendered}</a>
                 <p>${filteText(data.content.rendered)}</p>
-                <div class="links" style="gap: 10px; display: flex;">
-        <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+  <div class="links">
+
+                 <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up"></i></a>
+                    <a target="_blank" href="${Repositories_link}" class="link "><i class="fa-brands fa-github"></i></a>
+                    <a target="_blank" href="${Design_link}" class="link"> <i class="fa-brands fa-behance"></i></a>
+
     </div>
+
             </div >
 
             </div >
         `;
+
+
         countriesContainer.innerHTML = '';
         countriesContainer.insertAdjacentHTML('afterbegin', html);
+
+        await document.querySelectorAll(".link").forEach((a) =>
+        {
+            if (a.href === window.location.href || a.href === `${window.location.href}#`)
+            {
+                a.style.display = 'none';
+            }
+
+        });
+
+
+
     } catch (error)
     {
         console.error(`Error fetching post data ❌: ${error} `);
