@@ -99,11 +99,12 @@ async function fetchPosts()
 
 
         // ================== 
+        const postCategories = data.categories.map(catId => categoryMap[catId] || "غير معروف");
+
         const projectLink = data.acf?.link_progect || "";
         const Design_link = data.acf?.Design_link || "";
         const Repositories_link = data.acf?.Repositories_link || "";
-
-        const postCategories = data.categories.map(catId => categoryMap[catId] || "غير معروف");
+        const selectd_technologys = data.acf?.selectd_technologys || "";
 
 
 
@@ -150,116 +151,21 @@ async function fetchPosts()
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a target="_blank" href="${projectLink}">${data.title.rendered}</a>
                         <p>${filteText(data.content.rendered)}</p>
-          <div class="links">
+                            <ui class="technologys">
 
-                         <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up"></i></a>
+                            ${selectd_technologys.map(tec => `<li class="technology">${tec}</li>`).join('')}   
+                            </ui>
+
+                            <div class="links">
+                            <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up"></i></a>
                             <a target="_blank" href="${Repositories_link}" class="link "><i class="fa-brands fa-github"></i></a>
                             <a target="_blank" href="${Design_link}" class="link"> <i class="fa-brands fa-behance"></i></a>
 
-            </div>
-
-                    </div >
-
-                    </div >
+                        </div>
+                    </ div>
                 `;
 
-        //         const html = `
-        //  <div id="carouselExampleIndicators" class="carousel slide">
-        //       <div class="carousel-indicators">
-        //         <button
-        //           type="button"
-        //           data-bs-target="#carouselExampleIndicators"
-        //           data-bs-slide-to="0"
-        //           class=""
-        //           aria-label="Slide 1"
-        //         ></button>
-        //         <button
-        //           type="button"
-        //           data-bs-target="#carouselExampleIndicators"
-        //           data-bs-slide-to="1"
-        //           aria-label="Slide 2"
-        //           class=""
-        //         ></button>
-        //         <button
-        //           type="button"
-        //           data-bs-target="#carouselExampleIndicators"
-        //           data-bs-slide-to="2"
-        //           aria-label="Slide 3"
-        //           class="active"
-        //           aria-current="true"
-        //         ></button>
-        //       </div>
-        //       <div class="carousel-inner">
-        //         <div class="carousel-item active">
-        //           <svg
-        //             class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-        //             width="800"
-        //             height="400"
-        //             xmlns="http://www.w3.org/2000/svg"
-        //             role="img"
-        //             aria-label="Placeholder: First slide"
-        //             preserveAspectRatio="xMidYMid slice"
-        //             focusable="false"
-        //           >
-        //             <title>Placeholder</title>
-        //             <rect width="100%" height="100%" fill="#777"></rect>
-        //             <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
-        //           </svg>
-        //         </div>
-        //         <div class="carousel-item">
-        //           <svg
-        //             class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-        //             width="800"
-        //             height="400"
-        //             xmlns="http://www.w3.org/2000/svg"
-        //             role="img"
-        //             aria-label="Placeholder: Second slide"
-        //             preserveAspectRatio="xMidYMid slice"
-        //             focusable="false"
-        //           >
-        //             <title>Placeholder</title>
-        //             <rect width="100%" height="100%" fill="#666"></rect>
-        //             <text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text>
-        //           </svg>
-        //         </div>
-        //         <div class="carousel-item active active">
-        //           <svg
-        //             class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-        //             width="800"
-        //             height="400"
-        //             xmlns="http://www.w3.org/2000/svg"
-        //             role="img"
-        //             aria-label="Placeholder: Third slide"
-        //             preserveAspectRatio="xMidYMid slice"
-        //             focusable="false"
-        //           >
-        //             <title>Placeholder</title>
-        //             <rect width="100%" height="100%" fill="#555"></rect>
-        //             <text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text>
-        //           </svg>
-        //         </div>
-        //       </div>
-        //       <button
-        //         class="carousel-control-prev"
-        //         type="button"
-        //         data-bs-target="#carouselExampleIndicators"
-        //         data-bs-slide="prev"
-        //       >
-        //         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        //         <span class="visually-hidden">Previous</span>
-        //       </button>
-        //       <button
-        //         class="carousel-control-next"
-        //         type="button"
-        //         data-bs-target="#carouselExampleIndicators"
-        //         data-bs-slide="next"
-        //       >
-        //         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        //         <span class="visually-hidden">Next</span>
-        //       </button>
-        //     </div>
 
-        // `;
 
 
         countriesContainer.innerHTML = '';
