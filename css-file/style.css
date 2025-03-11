@@ -293,14 +293,15 @@ header nav {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  .logo,
+  .icons {
+    width: 17%;
+  }
 }
 
 header nav .logo img {
-  width: 200px;
+  width: 80px;
   transition: 0.4s ease-in-out;
-}
-.logo_ph {
-  display: none;
 }
 
 header nav .links {
@@ -355,7 +356,8 @@ header nav .icons a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(https://yossef-weal.github.io/my-site/svgs/portfolio_hero_pg.svg);
+  /* background: url(https://yossef-weal.github.io/my-site/svgs/portfolio_hero_pg.svg); */
+  background: linear-gradient(180deg, #007374a6 0%, rgba(74, 212, 147, 0) 79%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1022,15 +1024,6 @@ header .icon_menue {
     border-radius: 50px;
   }
 
-  header .links .logo {
-    display: block;
-  }
-  .logo {
-    display: none;
-  }
-  .logo_ph {
-    display: block;
-  }
   header nav .logo img {
     width: 80px;
   }
