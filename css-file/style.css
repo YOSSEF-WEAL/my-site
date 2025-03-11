@@ -178,10 +178,17 @@ section {
   text-transform: capitalize;
   color: var(--black_color);
   transition: 0.3s;
+  a {
+    color: var(--black_color);
+    background-color: var(--main_color);
+    text-decoration: underline !important;
+  }
 }
 
 .btn:hover {
   scale: 1.1;
+  color: var(--white_color);
+  background-color: var(--main_color);
 }
 
 .btn_no_bg {
