@@ -987,6 +987,9 @@ header .icon_menue {
 }
 
 @media (max-width: 1000px) {
+  header .container {
+    width: 92%;
+  }
   header nav .links {
     position: fixed;
     flex-direction: column;
@@ -1026,6 +1029,11 @@ header .icon_menue {
 
   header nav .logo img {
     width: 80px;
+  }
+
+  .logo,
+  .icons {
+    width: fit-content !important;
   }
   header .icon_menue {
     color: #ffffff;
