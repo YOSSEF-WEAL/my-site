@@ -96,6 +96,8 @@ async function fetchPosts(selectedCategories = [])
             const projectLink = post.acf?.link_progect || "";
             const Design_link = post.acf?.Design_link || "";
             const Repositories_link = post.acf?.Repositories_link || "";
+            const wordpress = post.acf?.wordpress || "";
+
 
 
             const excerptText = post.excerpt.rendered.replace(/<\/?[^>]+(>|$)/g, "");
@@ -114,6 +116,8 @@ async function fetchPosts(selectedCategories = [])
                     <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up"></i></a>
                     <a target="_blank" href="${Repositories_link}" class="link "><i class="fa-brands fa-github"></i></a>
                     <a target="_blank" href="${Design_link}" class="link"> <i class="fa-brands fa-behance"></i></a>
+                    <a target="_blank" href="${wordpress}" class="link"><i class="fa-brands fa-wordpress"></i></a>
+
                     </div>
                     <a  href="./post.html?id=${post.id}" class="readMore">Read More</a>
 

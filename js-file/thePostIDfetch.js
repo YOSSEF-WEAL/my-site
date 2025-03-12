@@ -105,6 +105,7 @@ async function fetchPosts()
         const Design_link = data.acf?.Design_link || "";
         const Repositories_link = data.acf?.Repositories_link || "";
         const selectd_technologys = data.acf?.selectd_technologys || "";
+        const wordpress = data.acf?.wordpress || "";
 
 
 
@@ -160,6 +161,7 @@ async function fetchPosts()
                             <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up"></i></a>
                             <a target="_blank" href="${Repositories_link}" class="link "><i class="fa-brands fa-github"></i></a>
                             <a target="_blank" href="${Design_link}" class="link"> <i class="fa-brands fa-behance"></i></a>
+                            <a target="_blank" href="${wordpress}" class="link"><i class="fa-brands fa-wordpress"></i></a>
 
                         </div>
                     </ div>
