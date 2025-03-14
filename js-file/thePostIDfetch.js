@@ -152,13 +152,17 @@ async function fetchPosts()
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a target="_blank" href="${projectLink}">${data.title.rendered}</a>
                         <p>${filteText(data.content.rendered)}</p>
-                            <ui class="technologys">
-
-                            ${selectd_technologys.map(tec => `<li class="technology">${tec}</li>`).join('')}   
+                        <h3>Technologys</h3>
+                        
+                        <ui class="technologys">
+                            ${selectd_technologys.map(tec => `<li class="technology">
+                                <img class="imgTec" src="./imgs/icons/${tec}.png" alt="">
+                                ${tec}</li>
+                                `).join('')}   
                             </ui>
-
+                            <h3>Links</h3>
                             <div class="links">
-                            <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up"></i></a>
+                            <a target="_blank" href="${projectLink}" class="link"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                             <a target="_blank" href="${Repositories_link}" class="link "><i class="fa-brands fa-github"></i></a>
                             <a target="_blank" href="${Design_link}" class="link"> <i class="fa-brands fa-behance"></i></a>
                             <a target="_blank" href="${wordpress}" class="link"><i class="fa-brands fa-wordpress"></i></a>

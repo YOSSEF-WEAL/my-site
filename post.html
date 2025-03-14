@@ -77,6 +77,13 @@
                     width: 50% !important;
                     order: 1;
 
+                    h3 {
+                        border-bottom: 3px solid var(--main_color);
+                        width: fit-content;
+                        line-height: 45px;
+                    }
+
+
                     h4 {
                         span {
                             font-size: 20px;
@@ -88,7 +95,7 @@
                     }
 
                     p {
-                        font-size: 22px;
+                        font-size: 18px;
                         margin: 0;
                     }
 
@@ -103,13 +110,18 @@
 
                         .technology {
                             width: fit-content;
-                            display: inline-table;
                             background: #43b58040;
                             padding: 4px 12px;
-                            height: 40px;
                             border-radius: 50px;
                             border: 3px solid var(--main_color);
-                            height: 10px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            .imgTec {
+                                width: 30px;
+                                border-radius: 0;
+                            }
                         }
                     }
                 }
