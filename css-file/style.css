@@ -1001,26 +1001,33 @@ header .icon_menue {
     position: fixed;
     flex-direction: column;
     background: var(--background-body);
-    top: 0;
+    top: 100px;
     left: -101%;
-    padding: 50px 0;
+    padding: 20px 0;
     text-align: center;
-    width: 400px;
+    width: 100%;
     transition: 0.5s ease-in-out;
     border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    height: 100vh;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    a {
+      width: 60%;
+      background: #fff3;
+    }
   }
 
   header nav .links.active {
     left: 0;
+    top: 100px;
   }
 
   .close_menue {
     display: block;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
     color: #ffffff;
     font-size: 18px;
     transition: 0.3s;
@@ -1136,7 +1143,7 @@ header .icon_menue {
   }
 
   .projects .projec_box {
-    width: 48%;
+    width: 100%;
   }
 
   .projects .projec_box .text a {
@@ -1205,7 +1212,7 @@ header .icon_menue {
   header nav .links {
     width: 100%;
     border-bottom: 1px solid var(--border-color);
-    border-right: none;
+    border-radius: 0 0 10px 0px;
     height: auto;
     z-index: 9999;
     gap: 10px;

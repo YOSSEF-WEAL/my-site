@@ -1,17 +1,26 @@
 let nav_links = document.querySelector(".links");
-function Open_colose_menu()
+
+const iconMenue = document.querySelector('.icon_menue');
+let isMuneOpen = false;
+
+iconMenue.addEventListener('click', function ()
 {
-    nav_links.classList.toggle("active");
-};
+    if (isMuneOpen === false)
+    {
+        nav_links.classList.add("active");
+        iconMenue.innerHTML = '<i class="fa-solid fa-x"></i>';
+        isMuneOpen = true;
+        console.log(isMuneOpen);
+    } else
+    {
+        nav_links.classList.remove("active");
+        iconMenue.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+        isMuneOpen = false;
+        console.log(isMuneOpen);
+    }
+});
 
 
-let links_heder = document.querySelector(".links");
-let link_nav = document.querySelectorAll(".link-nav");
-function close_nav()
-{
-    nav_links.classList.toggle("active");
-
-};
 
 let heder = document.querySelector("header");
 let span_btn_up = document.querySelector(".up");
@@ -44,29 +53,29 @@ span_btn_up.onclick = function ()
 };
 
 
-function removeAOSLinkOnMobile()
-{
-    if (window.innerWidth <= 768)
-    {
-        let aosLink = document.querySelector('link[href="https://unpkg.com/aos@2.3.1/dist/aos.css"]');
-        if (aosLink)
-        {
-            aosLink.parentNode.removeChild(aosLink);
-        }
-    }
-}
+// function removeAOSLinkOnMobile()
+// {
+//     if (window.innerWidth <= 768)
+//     {
+//         let aosLink = document.querySelector('link[href="https://unpkg.com/aos@2.3.1/dist/aos.css"]');
+//         if (aosLink)
+//         {
+//             aosLink.parentNode.removeChild(aosLink);
+//         }
+//     }
+// }
 
-window.addEventListener('load', removeAOSLinkOnMobile);
-window.addEventListener('resize', removeAOSLinkOnMobile);
+// window.addEventListener('load', removeAOSLinkOnMobile);
+// window.addEventListener('resize', removeAOSLinkOnMobile);
 
 
 // Spinner
-const spinner = document.querySelector('.spinner-wrapper')
-window.addEventListener('load', () =>
-{
-    spinner.style.opacity = '0';
-    setTimeout(() =>
-    {
-        spinner.style.display = 'none';
-    }, 100);
-})
+// const spinner = document.querySelector('.spinner-wrapper');
+// window.addEventListener('load', () =>
+// {
+//     spinner.style.opacity = '0';
+//     setTimeout(() =>
+//     {
+//         spinner.style.display = 'none';
+//     }, 100);
+// })
