@@ -76,6 +76,9 @@ async function fetchPosts(selectedCategories = [], numberPage = numberOfPage)
 {
     try
     {
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.textContent = `Loading...`;
+
         renderSpinner(countriesContainer);
         const categoryMap = await fetchCategories();
         const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=${numberPage}`);
@@ -139,10 +142,14 @@ async function fetchPosts(selectedCategories = [], numberPage = numberOfPage)
             }
         });
 
-
     } catch (error)
     {
         console.error(`❌ Error fetching posts: ${error}`);
+    } finally
+    {
+
+        loadMoreBtn.disabled = false;
+        loadMoreBtn.textContent = `Load More Projects`;
     }
 }
 
