@@ -71,6 +71,7 @@ a {
 
 :root {
   --main_color: #43b580;
+  --hover-color: #2e7c57;
   --p_color: #fffdfdf5;
   --bg_color: #0a1a1f;
   --white_color: #fff;
@@ -186,9 +187,7 @@ section {
 }
 
 .btn:hover {
-  scale: 1.1;
-  color: var(--white_color);
-  background-color: var(--main_color);
+  background-color: var(--hover-color);
 }
 
 .btn_no_bg {
@@ -292,7 +291,7 @@ header {
 .activeHeader {
   border-bottom: 1px solid #56565697;
   background: rgb(15 40 47 / 50%);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(100px);
 }
 
 header nav {
@@ -358,12 +357,11 @@ header nav .icons a:hover {
 
 /* start hero sc */
 .hero {
-  padding-top: 100px;
-  height: 100vh;
+  padding-top: 140px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: url(https://yossef-weal.github.io/my-site/svgs/portfolio_hero_pg.svg); */
   background: linear-gradient(180deg, #007374a6 0%, rgba(74, 212, 147, 0) 79%);
   background-position: center;
   background-repeat: no-repeat;
@@ -728,15 +726,7 @@ header nav .icons a:hover {
     padding: 10px;
     border-radius: 10px;
 
-    /* gap: 20px;
-    flex-direction: column;
-    width: 23%;
-
-    background-color: #10191b;
-    padding: 10px;
-    border-radius: 10px; */
     img {
-      /* width: 45%; */
       width: 50%;
       height: 100%;
       object-fit: cover;
@@ -745,7 +735,6 @@ header nav .icons a:hover {
     }
 
     .text {
-      /* width: calc(50% - 80px); */
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -802,6 +791,10 @@ header nav .icons a:hover {
       }
     }
   }
+
+  .projec_box:hover {
+    transform: translateY(-10px);
+  }
   .countriess {
     display: flex;
     flex-direction: row;
@@ -809,6 +802,31 @@ header nav .icons a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+  .loadMoreBtnDiv {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .loadMoreBtn {
+      background: #43b58040;
+      padding: 10px 15px;
+      border-radius: 50px;
+      border: 3px solid var(--main_color);
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      color: #fff;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      height: 50px;
+      justify-content: center;
+      .spiner_loding {
+        width: 35px;
+      }
+    }
   }
 }
 
@@ -1013,7 +1031,7 @@ header .icon_menue {
     align-items: center;
     a {
       width: 60%;
-      background: #fff3;
+      background: rgb(255 255 255 / 10%);
     }
   }
 
@@ -1131,13 +1149,7 @@ header .icon_menue {
   .services .boxs {
     width: 45%;
   }
-  .search {
-    & form {
-      .nameSeach {
-        width: 100% !important;
-      }
-    }
-  }
+
   .projects .projec_box .text {
     width: 100%;
   }

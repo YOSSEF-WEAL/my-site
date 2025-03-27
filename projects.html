@@ -12,9 +12,10 @@
     <link rel="icon" href="./imgs/logo_rades.png">
     <!-- file css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!--   <link class="Animation_Library" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link class="Animation_Library" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css-file/style.css">
     <script defer src="./js-file/postsAPi.js"></script>
+
 </head>
 
 <body>
@@ -91,66 +92,14 @@
             color: white;
         }
 
-        .search,
+
         .filter {
             display: flex;
-            gap: 10px;
+            flex-direction: row;
             align-items: center;
-
+            gap: 20px;
         }
 
-        .search {
-            form {
-                display: flex;
-                gap: 5px;
-                align-items: center;
-
-                .nameSeach {
-                    padding: 10px;
-                    border-radius: 50px;
-                    background: transparent;
-                    outline: none;
-                    width: 100px;
-                    height: 50px;
-                    font-size: 18px;
-                    color: #fff;
-                    cursor: pointer;
-                    border: 5px solid #ffffff47;
-                    transition: 0.3s ease-in-out;
-                }
-
-
-                .btnSeach {
-                    padding: 10px;
-                    border-radius: 50px;
-                    outline: none;
-                    width: 50px;
-                    height: 50px;
-                    font-size: 20px;
-                    color: #fff;
-                    align-items: center;
-                    cursor: pointer;
-                    border: 5px solid #ffffff47;
-                    display: flex;
-                    background: transparent;
-                    justify-content: center;
-                    transition: 0.3s ease-in-out;
-                }
-
-                .btnSeach:hover {
-                    border-color: var(--main_color);
-                    color: var(--main_color);
-                    scale: 1.08;
-                }
-
-                .nameSeach:focus {
-                    border-color: var(--main_color);
-                    width: 230px;
-
-                }
-
-            }
-        }
 
         @media (max-width: 1000px) {
             .filterDiv {
@@ -169,13 +118,7 @@
                 }
             }
 
-            .search,
-            .filter {
-                display: flex;
-                gap: 10px;
-                align-items: flex-start;
-                flex-direction: column;
-            }
+
         }
 
         section {
@@ -243,17 +186,11 @@
                     <h2>Filter :</h2>
                     <div class="filters"></div>
                 </div>
-                <div class="search">
-                    <h2>Search :</h2>
-                    <form action="">
-                        <input class="nameSeach" type="text" list="projectNams">
-                        <datalist id="projectNams">
-                        </datalist>
-                        <button class="btnSeach"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
+
             </div>
             <div class="countriess">
+            </div>
+            <div class="loadMoreBtnDiv" data-aos="flip-down"> <button class="loadMoreBtn">Load More Projects</button>
             </div>
         </div>
         </div>
@@ -276,11 +213,11 @@
 
 
     <div class="up"><i class="fa-solid fa-chevron-up"></i></div>
-    <!-- <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script> -->
+    </script>
     <script defer src="./js-file/main.js"></script>
 
 </body>

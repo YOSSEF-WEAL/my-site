@@ -1,24 +1,26 @@
 let nav_links = document.querySelector(".links");
-
+const nav_linkss = document.querySelectorAll(".link-nav");
 const iconMenue = document.querySelector('.icon_menue');
 let isMuneOpen = false;
 
-iconMenue.addEventListener('click', function ()
+nav_linkss.forEach(link => link.addEventListener('click', closeMune))
+
+
+function closeMune()
 {
-    if (isMuneOpen === false)
-    {
-        nav_links.classList.add("active");
-        iconMenue.innerHTML = '<i class="fa-solid fa-x"></i>';
-        isMuneOpen = true;
-        console.log(isMuneOpen);
-    } else
-    {
-        nav_links.classList.remove("active");
-        iconMenue.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
-        isMuneOpen = false;
-        console.log(isMuneOpen);
-    }
-});
+    nav_links.classList.remove("active");
+    iconMenue.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+    isMuneOpen = false;
+}
+
+function openMune()
+{
+    nav_links.classList.add("active");
+    iconMenue.innerHTML = '<i class="fa-solid fa-x"></i>';
+    isMuneOpen = true;
+}
+
+iconMenue.addEventListener('click', () => isMuneOpen === false ? openMune() : closeMune());
 
 
 

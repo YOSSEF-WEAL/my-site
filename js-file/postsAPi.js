@@ -1,4 +1,7 @@
 const countriesContainer = document.querySelector('.countriess');
+const loadMoreBtn = document.querySelector('.loadMoreBtn');
+let numberOfPage = 8;
+
 const renderSpinner = function (parintEl)
 {
     const markup = `
@@ -69,13 +72,13 @@ async function fetchCategories()
     return categoryMap;
 }
 
-async function fetchPosts(selectedCategories = [])
+async function fetchPosts(selectedCategories = [], numberPage = numberOfPage)
 {
     try
     {
         renderSpinner(countriesContainer);
         const categoryMap = await fetchCategories();
-        const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=100`);
+        const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=${numberPage}`);
         const data = await response.json();
         console.log(data);
 
@@ -124,9 +127,7 @@ async function fetchPosts(selectedCategories = [])
                     </div>
                 </div>
             `;
-            const serchOfNameOption = `<option data-url="./post.html?id=${post.id}">${post.title.rendered}</option>`;
-            const projectNamsList = document.getElementById('projectNams');
-            projectNamsList.insertAdjacentHTML('beforeend', serchOfNameOption);
+
             countriesContainer.insertAdjacentHTML('beforeend', html);
         });
 
@@ -144,26 +145,6 @@ async function fetchPosts(selectedCategories = [])
         console.error(`❌ Error fetching posts: ${error}`);
     }
 }
-const nameSeach = document.querySelector('.nameSeach');
-const btnSeach = document.querySelector('.btnSeach');
-
-btnSeach.addEventListener('click', function (e)
-{
-    e.preventDefault();
-    const projectNamsList = document.getElementById('projectNams');
-    const selectedOption = Array.from(projectNamsList.options).find(option => option.value === nameSeach.value);
-    if (selectedOption)
-    {
-        const url = selectedOption.getAttribute('data-url');
-        if (url)
-        {
-            window.location.href = url;
-        }
-    } else
-    {
-        console.error('No matching option found.');
-    }
-});
 
 
 
@@ -201,4 +182,42 @@ async function renderCategoryFilters()
 
 renderCategoryFilters();
 fetchPosts();
-console.log('last update in git to githup');
+
+
+
+const pagination = function ()
+{
+    let previousCount = 0;
+
+    loadMoreBtn.addEventListener('click', async function ()
+    {
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.textContent = `Loading...`;
+
+        try
+        {
+            numberOfPage += 4;
+            await fetchPosts([], numberOfPage);
+
+            let currentCount = document.querySelectorAll('.projec_box').length;
+
+            if (currentCount === previousCount)
+            {
+                loadMoreBtn.textContent = `No More Projects`;
+                loadMoreBtn.disabled = true;
+                return;
+            }
+
+            previousCount = currentCount;
+
+        } catch (error)
+        {
+            console.error(error);
+        }
+
+        loadMoreBtn.disabled = false;
+        loadMoreBtn.textContent = `Load More Projects`;
+    });
+};
+
+pagination();
