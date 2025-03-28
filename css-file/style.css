@@ -267,8 +267,8 @@ section {
 }
 
 .top_sc {
+  margin-bottom: 30px;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 .top_sc h2 {
@@ -634,54 +634,53 @@ header nav .icons a:hover {
 }
 
 /* start skills */
-.skills {
-  .boxsSkills {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 65px;
-    flex-wrap: wrap;
-    .boxSkill {
-      width: 150px;
-      height: 150px;
-      border-radius: 500px;
-      padding: 35px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      border: 2px solid var(--border-color);
-      transition: 0.4sease-in-out;
-      cursor: pointer;
-      i,
-      svg {
-        font-size: 80px;
-        color: var(--white_color);
-        transition: 0.3s ease-in-out;
-      }
-      svg {
-        scale: 1.2;
-      }
-      p {
-        font-size: 25px;
-        font-weight: 500;
-        display: none;
-      }
+/* .skills {
+  .skill {
+    p {
+    }
+    img {
     }
   }
-}
-.skills .boxSkill:hover {
-  background: linear-gradient(180deg, #4ad493, #007374);
-  border: 0px;
-  i,
-  svg {
-    scale: 1.2;
-  }
-  i,
-  svg,
-  p {
-    color: var(--background-body);
+} */
+
+.skills {
+  .container {
+    .boxsSkills {
+      .technologys {
+        display: flex;
+        align-items: center;
+        padding: 5px 0px;
+        justify-content: center;
+        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .technology {
+          width: fit-content;
+          background: #43b58040;
+          padding: 10px 20px;
+          border-radius: 11px;
+          border: 3px solid var(--main_color);
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+          .imgTec {
+            width: 50px;
+            border-radius: 0;
+          }
+          p {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 500;
+          }
+        }
+        .technology:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
   }
 }
 

@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link class="Animation_Library" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css-file/style.css">
+    <script defer src="./js-file/postsAPi.js"></script>
+    <script defer src="./js-file/skills.js"></script>
+
 </head>
 
 <body>
@@ -181,59 +184,10 @@
             </div>
 
             <div class="boxsSkills">
-                <div class="boxSkill" data-aos="zoom-in">
-                    <i class="fa-brands fa-html5"></i>
-                    <p>HTML</p>
-                </div>
-                <div class="boxSkill" data-aos="zoom-in">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em"
-                        width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z">
-                        </path>
-                    </svg>
-                    <p>CSS</p>
-                </div>
-                <div class="boxSkill" data-aos="zoom-in">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
-                        width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M11.9996 4.85999C8.82628 4.85999 6.84294 6.44665 6.04961 9.61999C7.23961 8.03332 8.62794 7.43832 10.2146 7.83499C11.12 8.06109 11.7666 8.71757 12.4835 9.44545C13.6507 10.6295 15.0004 12 17.9496 12C21.1229 12 23.1063 10.4133 23.8996 7.23998C22.7096 8.82665 21.3213 9.42165 19.7346 9.02499C18.8292 8.79889 18.1827 8.1424 17.4657 7.41452C16.2995 6.23047 14.9498 4.85999 11.9996 4.85999ZM6.04961 12C2.87628 12 0.892943 13.5867 0.0996094 16.76C1.28961 15.1733 2.67794 14.5783 4.26461 14.975C5.17 15.2011 5.81657 15.8576 6.53354 16.5855C7.70073 17.7695 9.05039 19.14 11.9996 19.14C15.1729 19.14 17.1563 17.5533 17.9496 14.38C16.7596 15.9667 15.3713 16.5617 13.7846 16.165C12.8792 15.9389 12.2326 15.2824 11.5157 14.5545C10.3495 13.3705 8.99982 12 6.04961 12Z">
-                        </path>
-                    </svg>
-                    <p>Tailwind</p>
-                </div>
-                <div class="boxSkill" data-aos="zoom-in">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em"
-                        width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M333.5,201.4c0-22.1-15.6-34.3-43-34.3h-50.4v71.2h42.5C315.4,238.2,333.5,225,333.5,201.4z M517,188.6 c-9.5-30.9-10.9-68.8-9.8-98.1c1.1-30.5-22.7-58.5-54.7-58.5H123.7c-32.1,0-55.8,28.1-54.7,58.5c1,29.3-0.3,67.2-9.8,98.1 c-9.6,31-25.7,50.6-52.2,53.1v28.5c26.4,2.5,42.6,22.1,52.2,53.1c9.5,30.9,10.9,68.8,9.8,98.1c-1.1,30.5,22.7,58.5,54.7,58.5h328.7 c32.1,0,55.8-28.1,54.7-58.5c-1-29.3,0.3-67.2,9.8-98.1c9.6-31,25.7-50.6,52.1-53.1v-28.5C542.7,239.2,526.5,219.6,517,188.6z M300.2,375.1h-97.9V136.8h97.4c43.3,0,71.7,23.4,71.7,59.4c0,25.3-19.1,47.9-43.5,51.8v1.3c33.2,3.6,55.5,26.6,55.5,58.3 C383.4,349.7,352.1,375.1,300.2,375.1z M290.2,266.4h-50.1v78.4h52.3c34.2,0,52.3-13.7,52.3-39.5 C344.7,279.6,326.1,266.4,290.2,266.4z">
-                        </path>
-                    </svg>
-                    <p>Bootstrap</p>
-                </div>
-                <div class="boxSkill" data-aos="zoom-in">
-                    <i class="fa-brands fa-js"></i>
-                    <p>JavaScript</p>
-                </div>
-                <div class="boxSkill" data-aos="zoom-in">
-                    <i class="fa-brands fa-react"></i>
-                    <p>React.js</p>
-                </div>
-                <div class="boxSkill" data-aos="zoom-in">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
-                        width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM15.9999 8H14.6499V12H15.9999V8ZM9.34609 9.70937L15.405 17.5379L16.4591 16.7293L9.68281 8H8V15.9969H9.34609V9.70937Z">
-                        </path>
-                    </svg>
-                    <p>Next.js</p>
-                </div>
-                <div class="boxSkill" data-aos="zoom-in">
-                    <i class="fa-brands fa-github"></i>
-                    <p>GitHub</p>
-                </div>
 
+                <ui class="technologys">
+
+                </ui>
             </div>
         </div>
     </section>
@@ -241,95 +195,16 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="top_sc">
-                <h2>Explore my popular <span>Projects</span></h2>
+                <h2>Explore My Last <span>Projects</span></h2>
             </div>
 
             <div class="countriess">
-                <div class="projec_box aos-init aos-animate" data-aos="fade-up">
-                    <img loading="lazy" src="https://a3raff.com/Yossefprofile/wp-content/uploads/2025/03/caver.png"
-                        alt="">
-                    <div class="text">
-                        <h4><span>Front-end, React</span></h4>
-                        <a href="./post.html?id=288">Fast React Pizza</a>
-                        <p>A page to display some dishes, their ingredients, the price ...</p>
-                        <div class="links">
-                            <a target="_blank" href="https://pizza-menu-reat.netlify.app/" class="link"> <i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                            <a target="_blank" href="https://github.com/YOSSEF-WEAL/Pizza-Menu-React.js"
-                                class="link "><i class="fa-brands fa-github"></i></a>
-                            <a target="_blank" href="" class="link" style="display: none;"> <i
-                                    class="fa-brands fa-behance"></i></a>
-                        </div>
-                        <a href="./post.html?id=288" class="readMore">Read More</a>
 
-                    </div>
+                <div class="loadMoreBtnDiv" data-aos="flip-down"> <button class="loadMoreBtn">Load More
+                        Projects</button>
                 </div>
-                <div class="projec_box aos-init aos-animate" data-aos="fade-up">
-                    <img loading="lazy" src="https://a3raff.com/Yossefprofile/wp-content/uploads/2025/02/cover-AI.png"
-                        alt="">
-                    <div class="text">
-                        <h4><span>Front-end</span></h4>
-                        <a href="./post.html?id=221">Clone Gemini AI Chatbot</a>
-                        <p>Design from scratch &nbsp;Clone Gemini AI Chatbot Using HTML CSS ...</p>
-                        <div class="links">
-                            <a target="_blank" href="https://yossef-weal.github.io/Gemini-AI-Chatbot/" class="link"> <i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                            <a target="_blank" href="https://github.com/YOSSEF-WEAL/Gemini-AI-Chatbot" class="link "><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a target="_blank" href="" class="link" style="display: none;"> <i
-                                    class="fa-brands fa-behance"></i></a>
-                        </div>
-                        <a href="./post.html?id=221" class="readMore">Read More</a>
-
-                    </div>
-                </div>
-
-                <div class="projec_box aos-init aos-animate" data-aos="fade-up">
-                    <img loading="lazy"
-                        src="https://a3raff.com/Yossefprofile/wp-content/uploads/2025/02/cover-e1740503069937.png"
-                        alt="">
-                    <div class="text">
-                        <h4><span>Front-end</span></h4>
-                        <a href="./post.html?id=212">Quiz App</a>
-                        <p>Build A Quiz App in HTML CSS &amp; JavaScript. It ...</p>
-                        <div class="links">
-                            <a target="_blank" href="https://yossef-weal.github.io/Quiz-App/" class="link"> <i
-                                    class="fa-solid fa-arrow-up"></i></a>
-                            <a target="_blank" href="https://github.com/YOSSEF-WEAL/Quiz-App" class="link "><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a target="_blank" href="https://www.behance.net/gallery/220124935/Quiz-App" class="link">
-                                <i class="fa-brands fa-behance"></i></a>
-                        </div>
-                        <a href="./post.html?id=212" class="readMore">Read More</a>
-
-                    </div>
-                </div>
-
-                <div class="projec_box aos-init aos-animate" data-aos="fade-up">
-                    <img loading="lazy"
-                        src="https://a3raff.com/Yossefprofile/wp-content/uploads/2025/02/macbook-mockup-air-model-scene-67b6f0ad74dc51182d8edf3b.png"
-                        alt="">
-                    <div class="text">
-                        <h4><span>Front-end</span></h4>
-                        <a href="./post.html?id=202">Forkify-app</a>
-                        <p>Forkify is a recipe web app using the Forkify API ...</p>
-                        <div class="links">
-                            <a target="_blank" href="https://forkify-yossef.netlify.app/#664c8f193e7aa067e94e8742"
-                                class="link"> <i class="fa-solid fa-arrow-up"></i></a>
-                            <a target="_blank" href="https://github.com/YOSSEF-WEAL/forkify-app" class="link "><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a target="_blank" href="" class="link" style="display: none;"> <i
-                                    class="fa-brands fa-behance"></i></a>
-                        </div>
-                        <a href="./post.html?id=202" class="readMore">Read More</a>
-
-                    </div>
-                </div>
-
             </div>
-            <a class="more" data-aos="fade-down" href="./projects.html">Browse
-                more projects</a>
-        </div>
+            <a class="more" data-aos="fade-down" href="./projects.html">Browse All Projects</a>
     </section>
     <section data-aos="fade-up" class="contact" id="contact">
         <div class="top_sc">
