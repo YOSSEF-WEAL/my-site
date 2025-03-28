@@ -83,8 +83,6 @@ async function fetchPosts(selectedCategories = [], numberPage = numberOfPage)
         const categoryMap = await fetchCategories();
         const response = await fetch(`https://a3raff.com/Yossefprofile/wp-json/wp/v2/posts?_embed&per_page=${numberPage}`);
         const data = await response.json();
-        console.log(data);
-
         countriesContainer.innerHTML = '';
 
         data.forEach(post =>
