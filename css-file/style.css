@@ -687,16 +687,11 @@ header nav .icons a:hover {
 @media (max-width: 500px) {
   .skills {
     .boxsSkills {
-      gap: 20px;
-      .boxSkill {
-        height: 120px;
-        width: 120px;
-        i,
-        svg {
-          font-size: 60px;
-        }
-        p {
-          font-size: 20px;
+      .technologys {
+        flex-direction: column !important;
+        .technology {
+          width: 60% !important;
+          justify-content: center !important;
         }
       }
     }
