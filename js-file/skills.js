@@ -5,7 +5,6 @@ async function fetchSkills()
 {
     try
     {
-        renderSpinner(boxsSkills);
 
         const res = await fetch("https://a3raff.com/Yossefprofile/wp-json/wp/v2/skill");
         const data = await res.json();
