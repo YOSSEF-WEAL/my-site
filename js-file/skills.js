@@ -6,7 +6,7 @@ async function fetchSkills()
     try
     {
 
-        const res = await fetch("https://a3raff.com/Yossefprofile/wp-json/wp/v2/skill");
+        const res = await fetch("https://a3raff.com/Yossefprofile/wp-json/wp/v2/skill?per_page=100");
         const data = await res.json();
         boxsSkills.innerHTML = '';
         data.forEach(skill =>
