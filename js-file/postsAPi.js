@@ -87,9 +87,11 @@ async function fetchPosts(categories = [], page = currentPage, append = false)
             countriesContainer.insertAdjacentHTML('beforeend', html);
         });
 
+
         document.querySelectorAll(".link").forEach(a =>
         {
-            if (a.href === window.location.href || a.href === `${window.location.href}#`)
+            const href = a.getAttribute('href');
+            if (!href || href === '' || href === '#' || href === 'javascript:void(0)')
             {
                 a.style.display = 'none';
             }
