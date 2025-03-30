@@ -705,7 +705,6 @@ header nav .icons a:hover {
         gap: 20px !important;
         .technology {
           justify-content: center !important;
-          width: 45% !important;
         }
       }
     }
