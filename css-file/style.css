@@ -710,12 +710,6 @@ header nav .icons a:hover {
     }
   }
 }
-/* end skills */
-/* start progects */
-
-/* .projects .projec_box:nth-child(2n) {
-  flex-direction: row-reverse;
-} */
 
 .projects {
   gap: 20px;
@@ -786,6 +780,11 @@ header nav .icons a:hover {
 
           i {
             scale: 1.3;
+          }
+          img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
           }
         }
         .link:hover {
@@ -891,9 +890,14 @@ header nav .icons a:hover {
   justify-content: center;
   padding: 20px;
   border-radius: 10px;
-  transition: 0.4s;
   width: 48%;
   transition: 0.3s ease-in-out;
+  gap: 10px;
+  img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
 }
 
 .contact .soshel-contect .links a:hover {
