@@ -658,6 +658,7 @@ header nav .icons a:hover {
         .technology {
           background: #43b58040;
           border: 3px solid var(--main_color);
+
           display: flex;
           align-items: center;
           gap: 10px;
@@ -680,6 +681,7 @@ header nav .icons a:hover {
             color: #fff;
             font-weight: 500;
             transition: 0.3s ease-in-out;
+            text-align: center;
           }
         }
         .technology:hover {
@@ -705,6 +707,12 @@ header nav .icons a:hover {
         gap: 20px !important;
         .technology {
           justify-content: center !important;
+          flex-direction: column !important;
+          height: 120px !important;
+          width: 120px !important;
+          .imgTec {
+            width: 45px !important;
+          }
         }
       }
     }
@@ -1021,13 +1029,13 @@ header .icon_menue {
 
 @media (max-width: 1250px) {
   .container {
-    width: 97%;
+    width: 90%;
   }
 }
 
 @media (max-width: 1000px) {
   header .container {
-    width: 92%;
+    width: 90%;
   }
   header nav .links {
     position: fixed;
@@ -1396,7 +1404,7 @@ header .icon_menue {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #00bf638c;
+  background-color: #33b589a1;
   border-radius: 50px;
 }
 
