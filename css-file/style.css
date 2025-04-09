@@ -188,6 +188,7 @@ section {
 
 .btn:hover {
   background-color: var(--hover-color);
+  color: #fff;
 }
 
 .btn_no_bg {
@@ -815,7 +816,7 @@ header nav .icons a:hover {
   .countriess {
     display: flex;
     flex-direction: row;
-    min-height: 50vh;
+    min-height: 20vh;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -896,7 +897,7 @@ header nav .icons a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 8px;
   border-radius: 10px;
   width: 48%;
   transition: 0.3s ease-in-out;
