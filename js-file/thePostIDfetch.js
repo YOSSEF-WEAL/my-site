@@ -85,9 +85,9 @@ async function fetchPosts()
                         <h3>Technologys</h3>
                         
                         <ui class="technologys">
-                            ${selectd_technologys.map(tec => `<li class="technology">
-                                <img class="imgTec" src="./imgs/icons/${tec}.png" alt="">
-                                ${tec}</li>
+                            ${selectd_technologys.map((tec) => `<li class="technology">
+                                <img class="imgTec" src="${tec}" alt="">
+                              </li>
                                 `).join('')}   
                             </ui>
                             <h3>Links</h3>
@@ -124,3 +124,7 @@ async function fetchPosts()
     }
 }
 fetchPosts();
+
+
+
+

@@ -27,8 +27,6 @@
         .countriess {
 
             .projec_box {
-                /* background: transparent !important; */
-                /* border: none; */
                 width: 100%;
                 align-items: flex-start;
                 flex-direction: row;
@@ -111,7 +109,8 @@
                         padding: 5px 0px;
 
                         .technology {
-                            width: fit-content;
+                            width: 70px;
+                            height: 70px;
                             background: #43b58040;
                             padding: 4px 12px;
                             border-radius: 50px;
@@ -121,17 +120,21 @@
                             gap: 5px;
                             cursor: pointer;
                             transition: 0.3s ease-in-out;
-
+                            justify-content: center;
 
                             .imgTec {
-                                width: 30px;
+                                width: 100%;
+                                height: fit-content;
                                 border-radius: 0;
                             }
                         }
                     }
 
                     .technology:hover {
-                        transform: translateY(-5px);
+                        .imgTec {
+                            scale: 1.1;
+                            rotate: 10deg;
+                        }
                     }
                 }
             }
@@ -207,19 +210,6 @@
             }
         }
     </style>
-
-    <!-- Loding -->
-    <!-- <div class="spinner-wrapper">
-            <div class="loader">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div> -->
-    <!-- Loding -->
-
-
-
 
     <div class="bg-lines">
         <span></span>
