@@ -173,12 +173,16 @@ section {
 
 .btn {
   background-color: var(--main_color);
-  padding: 10px 15px;
+  padding: 10px;
   border-radius: 4px;
-  font-weight: 600;
   text-transform: capitalize;
   color: var(--black_color);
   transition: 0.3s;
+  outline: none;
+  border: none;
+  height: fit-content;
+  font-weight: 500;
+  cursor: pointer;
   a {
     color: var(--black_color);
     background-color: var(--main_color);
@@ -187,8 +191,7 @@ section {
 }
 
 .btn:hover {
-  background-color: var(--hover-color);
-  color: #fff;
+  background: #49c58b;
 }
 
 .btn_no_bg {
@@ -726,7 +729,7 @@ header nav .icons a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   .projec_box {
-    display: flex;
+    /* display: flex;
     align-items: center;
     transition: 0.3s ease-in-out;
     gap: 20px;
@@ -736,10 +739,25 @@ header nav .icons a:hover {
     border-radius: 10px;
     border: 3px solid #ffffff45;
     background: #2f4b5380;
+    backdrop-filter: blur(100px); */
+
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    gap: 20px;
+    flex-direction: column;
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #ffffff45;
+    background: #2f4b5380;
     backdrop-filter: blur(100px);
+
     img {
-      width: 50%;
-      height: 100%;
+      width: 100%;
+      max-height: 300px;
+      /* height: 100%; */
+      /* aspect-ratio: 1 / 1; */
       object-fit: cover;
       border-radius: 8px;
       transition: 0.4s ease-in-out;
@@ -773,6 +791,7 @@ header nav .icons a:hover {
         gap: 15px;
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
 
         .link {
           width: 50px;
@@ -811,7 +830,6 @@ header nav .icons a:hover {
   }
 
   .projec_box:hover {
-    transform: translateY(-10px);
   }
   .countriess {
     display: flex;

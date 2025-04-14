@@ -66,7 +66,6 @@ async function fetchPosts(categories = [], page = currentPage, append = false)
                             <a target="_blank" href="${designLink}" class="link"><i class="fa-brands fa-behance"></i></a>
                             <a target="_blank" href="${wordpress}" class="link"><i class="fa-brands fa-wordpress"></i></a>
                         </div>
-                        <a href="./post.html?id=${post.id}" class="readMore">Read More</a>
                     </div>
                 </div>
             `;

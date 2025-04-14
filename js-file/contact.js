@@ -19,9 +19,10 @@ async function fetchContent()
             const contactName = content.title?.rendered || "";
             const contactUrl = content.acf?.contactUrl || "";
             const contactImgUrl = content.acf?.contactImgUrl || "";
+            const target = content.acf?.target === false ? "_blank" : "_parent";
 
             const html = `<a
-            target="_blank"
+            target=${target} 
             href="${contactUrl}"
             class="item d-inline-flex justify-content-center align-items-center gap-2" >
             <img src="${contactImgUrl}" alt="" />
