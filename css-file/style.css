@@ -694,9 +694,7 @@ header nav .icons a:hover {
             scale: 1.2;
           }
           p {
-            background: linear-gradient(127deg, #4ad493, #048b8d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--border-color);
           }
         }
       }
@@ -708,12 +706,12 @@ header nav .icons a:hover {
   .skills {
     .boxsSkills {
       .technologys {
-        gap: 20px !important;
+        gap: 10px !important;
         .technology {
           justify-content: center !important;
           flex-direction: column !important;
           height: 120px !important;
-          width: 120px !important;
+          width: 30% !important;
           .imgTec {
             width: 45px !important;
           }

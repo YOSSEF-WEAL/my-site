@@ -15,10 +15,14 @@ async function fetchSkills()
         {
             const skillName = skill.acf?.skillName || "";
             const skillImage = skill.acf?.skillImage || "";
-            const html = `<li class="technology"  data-aos="zoom-in">
-                          <img  class="imgTec" src="${skillImage}" alt="${skillName}">
-                        <p>${skillName}</p>
-                    </li>`
+            const borderColor = skill.acf?.borderColor;
+            const backgroundColor = skill.acf?.backgroundColor;
+
+            const html = `
+<li class="technology" data-aos="zoom-in" style="border-color: ${borderColor} ; background-color: ${backgroundColor} ;">
+    <img class="imgTec" src="${skillImage}" alt="${skillName}">
+    <p style="--border-color: ${borderColor};">${skillName}</p>
+</li>`
             boxsSkills.insertAdjacentHTML('beforeend', html);
         });
     } catch (error)
