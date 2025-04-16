@@ -101,7 +101,12 @@ body {
     margin-bottom: 30px;
   }
   .item {
-    width: 100% !important;
+    width: 48% !important;
+    flex-direction: column;
+    img {
+      width: 50px !important;
+      height: 50px !important;
+    }
   }
   .scund {
     padding: 0px;
