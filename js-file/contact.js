@@ -24,7 +24,10 @@ async function fetchContent()
             const html = `<a
             target=${target} 
             href="${contactUrl}"
-            class="item d-inline-flex justify-content-center align-items-center gap-2" >
+            class="item d-inline-flex justify-content-center align-items-center gap-2"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+            >
             <img src="${contactImgUrl}" alt="" />
             <p>${contactName}</p>
           </a>`;
