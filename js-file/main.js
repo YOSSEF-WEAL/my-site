@@ -55,29 +55,3 @@ span_btn_up.onclick = function ()
 };
 
 
-// function removeAOSLinkOnMobile()
-// {
-//     if (window.innerWidth <= 768)
-//     {
-//         let aosLink = document.querySelector('link[href="https://unpkg.com/aos@2.3.1/dist/aos.css"]');
-//         if (aosLink)
-//         {
-//             aosLink.parentNode.removeChild(aosLink);
-//         }
-//     }
-// }
-
-// window.addEventListener('load', removeAOSLinkOnMobile);
-// window.addEventListener('resize', removeAOSLinkOnMobile);
-
-
-// Spinner
-// const spinner = document.querySelector('.spinner-wrapper');
-// window.addEventListener('load', () =>
-// {
-//     spinner.style.opacity = '0';
-//     setTimeout(() =>
-//     {
-//         spinner.style.display = 'none';
-//     }, 100);
-// })

@@ -16,7 +16,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css-file/styleHome.css">
-    <script defer type="module" src="./js-file/contact.js"></script>
+    <!-- <script defer type="module" src="./js-file/contact.js"></script> -->
+    <script defer type="module" src="./js-file/contactJSON.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
@@ -34,7 +35,12 @@
                     JavaScript & Bootstrap and React JS</h6>
             </div>
             <div class="scund d-flex flex-column gap-2 align-items-center">
-
+                <a target=${target} href="${contactUrl}"
+                    class="item d-inline-flex justify-content-center align-items-center gap-2" data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom">
+                    <img src="./imgs/icons/JavaScript.png" alt="" />
+                    <p>${contactName}</p>
+                </a>
             </div>
         </div>
     </div>
