@@ -132,7 +132,14 @@ async function renderCategoryFilters()
     });
 }
 
+// Event listener for the "Load More" button
+loadMoreBtn.addEventListener('click', () =>
+{
+    currentPage += 1;
+    fetchPosts(selectedCategories, currentPage, true);
+});
 
+// Infinite Scroll logic
 function handleScroll()
 {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
@@ -143,8 +150,9 @@ function handleScroll()
     }
 }
 
+// Attach the scroll event
 window.addEventListener('scroll', handleScroll);
 
+// Initialize
 renderCategoryFilters();
 fetchPosts(selectedCategories, currentPage);
-window.addEventListener('scroll', handleScroll); 
