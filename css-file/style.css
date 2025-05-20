@@ -739,14 +739,25 @@ header nav .icons a:hover {
     background: #2f4b5380;
     backdrop-filter: blur(100px);
 
-    img {
-      width: 100%;
-      min-height: 200px;
-      object-fit: cover;
+    .productImageCover {
+      height: 220px;
+      overflow: hidden;
       border-radius: 8px;
-      transition: 0.4s ease-in-out;
+      width: 100%;
+      img {
+        width: 101%;
+        height: 101%;
+        object-fit: cover;
+        transition: 0.4s ease-in-out;
+      }
     }
 
+    .productImageCover:hover img {
+      scale: 1.1;
+    }
+    img {
+      border-radius: 8px;
+    }
     .text {
       width: 100%;
       display: flex;

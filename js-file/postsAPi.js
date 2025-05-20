@@ -55,7 +55,9 @@ async function fetchPosts(categories = [], page = currentPage, append = false)
 
             const html = `
                 <div class="projec_box" data-aos="fade-up">
-                    <img loading="lazy" src="${imageUrl}" alt="">
+                    <div class='productImageCover'> 
+                        <img loading="lazy" src="${imageUrl}" alt="">
+                    </div>
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a href="./post.html?id=${post.id}">${post.title.rendered}</a>
@@ -130,16 +132,19 @@ async function renderCategoryFilters()
     });
 }
 
-// Pagination logic
-const pagination = function ()
+
+function handleScroll()
 {
-    loadMoreBtn.addEventListener('click', async function ()
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 10 && !loadMoreBtn.disabled)
     {
         currentPage += 1;
-        await fetchPosts(selectedCategories, currentPage, true);
-    });
-};
+        fetchPosts(selectedCategories, currentPage, true);
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
 
 renderCategoryFilters();
 fetchPosts(selectedCategories, currentPage);
-pagination();
+window.addEventListener('scroll', handleScroll); 
