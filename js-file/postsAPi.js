@@ -55,9 +55,10 @@ async function fetchPosts(categories = [], page = currentPage, append = false)
 
             const html = `
                 <div class="projec_box" data-aos="fade-up">
-                    <div class='productImageCover'> 
+                    <a href="./post.html?id=${post.id}" class='productImageCover'>
                         <img loading="lazy" src="${imageUrl}" alt="">
-                    </div>
+                    </a>
+             
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a href="./post.html?id=${post.id}">${post.title.rendered}</a>
