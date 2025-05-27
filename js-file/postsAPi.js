@@ -106,6 +106,11 @@ async function fetchPosts(categories = [], page = currentPage, append = false)
 
 async function renderCategoryFilters()
 {
+    if (!filtersContainer)
+    {
+        return;
+    }
+
     new RenderSpinner(filtersContainer);
     const categoryMap = await fetchCategories();
     filtersContainer.innerHTML = '';
@@ -140,7 +145,6 @@ function handleScroll()
 
     if (myPage.includes('portfolio') || myPage.includes('Portfolio'))
     {
-        console.log('no InfiniteScroll')
         return null;
     }
 

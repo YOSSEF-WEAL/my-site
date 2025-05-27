@@ -1,8 +1,12 @@
+import Header from "./Header.js";
+
+
+new Header();
+
 let nav_links = document.querySelector(".links");
 const nav_linkss = document.querySelectorAll(".link-nav");
 const iconMenue = document.querySelector('.icon_menue');
 let isMuneOpen = false;
-
 nav_linkss.forEach(link => link.addEventListener('click', closeMune))
 
 
