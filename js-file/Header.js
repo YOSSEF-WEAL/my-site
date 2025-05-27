@@ -2,11 +2,11 @@ class Header
 {
     constructor()
     {
-        const location = window.location.href.toLowerCase();
-        let path = './portfolio.html';
+        const pathname = window.location.pathname.toLowerCase(); // التحقق من المسار فقط
+        let path = './portfolio';
 
-        if (location.includes("portfolio")) path = '';
-        else path = './portfolio.html';
+        if (pathname.includes("portfolio") && pathname.endsWith("portfolio")) path = ''; // التحقق من وجود كلمة "portfolio" في نهاية المسار
+        else path = './portfolio';
 
         const html = `<nav class="container">
             <a href="./index.html" class="logo"><img src="./imgs/logo_rades.png" alt=""></a>
@@ -26,7 +26,7 @@ class Header
                 <a target="_blank" href="https://www.behance.net/yossefweal"><i class="fa-brands fa-behance"></i></a>
                 <span class="icon_menue"><i class="fa-solid fa-bars-staggered"></i></span>
             </div>
-        </nav>`
+        </nav>`;
 
         const header = document.querySelector('#header');
         header.innerHTML = '';
