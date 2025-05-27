@@ -2,10 +2,10 @@ class Header
 {
     constructor()
     {
-        const location = document.URL;
+        const location = window.location.href.toLowerCase();
         let path = './portfolio.html';
 
-        if (location.includes("portfolio") || location.includes("Portfolio")) path = '';
+        if (location.includes("portfolio")) path = '';
         else path = './portfolio.html';
 
         const html = `<nav class="container">
