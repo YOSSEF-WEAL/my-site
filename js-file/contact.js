@@ -35,14 +35,14 @@ async function fetchContent()
             scund.insertAdjacentHTML("beforeend", html);
         });
 
-        await document.querySelectorAll(".item").forEach(item =>
-        {
-            const itemPath = new URL(item.href).pathname;
-            if (itemPath.includes('portfolio'))
-            {
-                item.style.display = "none";
-            }
-        });
+        // await document.querySelectorAll(".item").forEach(item =>
+        // {
+        //     const itemPath = new URL(item.href).pathname;
+        //     if (itemPath.includes('portfolio'))
+        //     {
+        //         item.style.display = "none";
+        //     }
+        // });
 
 
 
