@@ -55,3 +55,29 @@ span_btn_up.onclick = function ()
 };
 
 
+// Select all navigation links
+const navLinks = document.querySelectorAll('.link-nav');
+
+// Add smooth scrolling behavior
+navLinks.forEach(link =>
+{
+    link.addEventListener('click', function (event)
+    {
+        const targetId = this.getAttribute('href').slice(1); // Get the target section ID
+        const targetSection = document.getElementById(targetId);
+
+        // Check if the target section exists in the current page
+        if (targetSection)
+        {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            const offset = 120; // Margin offset
+            const sectionPosition = targetSection.offsetTop - offset;
+
+            window.scrollTo({
+                top: sectionPosition,
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+    });
+});

@@ -133,26 +133,41 @@ async function renderCategoryFilters()
     });
 }
 
-// Event listener for the "Load More" button
-loadMoreBtn.addEventListener('click', () =>
-{
-    currentPage += 1;
-    fetchPosts(selectedCategories, currentPage, true);
-});
-
 // Infinite Scroll logic
 function handleScroll()
 {
+    const myPage = document.URL;
+
+    if (myPage.includes('portfolio') || myPage.includes('Portfolio'))
+    {
+        console.log('no InfiniteScroll')
+        return null;
+    }
+
+    if (!loadMoreBtn || loadMoreBtn.disabled) return;
+
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (scrollTop + clientHeight >= scrollHeight - 10 && !loadMoreBtn.disabled)
+    if (scrollTop + clientHeight >= scrollHeight - 10)
     {
         currentPage += 1;
         fetchPosts(selectedCategories, currentPage, true);
     }
 }
 
-// Attach the scroll event
-window.addEventListener('scroll', handleScroll);
+if (loadMoreBtn)
+{
+    window.addEventListener('scroll', handleScroll);
+}
+
+// Event listener for the "Load More" button
+if (loadMoreBtn)
+{
+    loadMoreBtn.addEventListener('click', () =>
+    {
+        currentPage += 1;
+        fetchPosts(selectedCategories, currentPage, true);
+    });
+}
 
 // Initialize
 renderCategoryFilters();
