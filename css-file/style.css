@@ -660,23 +660,20 @@ header nav .icons a:hover {
         flex-wrap: wrap;
 
         .technology {
-          background: #43b58040;
-          border: 3px solid var(--main_color);
-
           display: flex;
           align-items: center;
           gap: 10px;
           cursor: pointer;
           transition: 0.3s ease-in-out;
-          flex-direction: row;
+          flex-direction: column;
           width: fit-content;
-          height: 45px;
-          border-radius: 8px;
+          height: 85px;
+          border-radius: 1px;
           justify-content: center;
           padding: 6px 10px;
 
           .imgTec {
-            width: 30px;
+            width: 40px;
             border-radius: 0;
             transition: 0.3s ease-in-out;
           }
@@ -689,12 +686,9 @@ header nav .icons a:hover {
           }
         }
         .technology:hover {
-          transform: rotate(6deg);
           .imgTec {
+            transform: rotate(6deg);
             scale: 1.2;
-          }
-          p {
-            color: var(--border-color);
           }
         }
       }
@@ -710,7 +704,7 @@ header nav .icons a:hover {
         .technology {
           justify-content: center !important;
           flex-direction: column !important;
-          height: 120px !important;
+          height: 95px !important;
           width: 30% !important;
           .imgTec {
             width: 45px !important;

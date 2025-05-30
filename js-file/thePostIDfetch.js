@@ -55,10 +55,10 @@ async function fetchPosts()
                             ${imageUrls.map((url, index) =>
         {
             return `
-                                    <div class="swiper-slide"> 
-                                        <img loading="lazy" class="" src="${url}" alt="slide-${index}">
-                                    </div>
-                                `;
+                                <div class="swiper-slide"> 
+                                    <img loading="lazy" class="" src="${url}" alt="slide-${index}">
+                                </div>
+                            `;
         }).join('')}
                         </div>
                         <div class="swiper-pagination"></div>
@@ -69,7 +69,8 @@ async function fetchPosts()
                 <div class="text">
                     <h4><span>${postCategories.join(", ")}</span></h4>
                     <a target="_blank" href="${projectLink}">${data.title.rendered}</a>
-                    <p>${filteText(data.content.rendered)}</p>
+                    <p class="content-preview">${filteText(data.content.rendered)}</p>
+                    <button class="read-more-btn btn">Read More</button>
                     <h3>Technologys</h3>
                     <ui class="technologys">
                         ${selectd_technologys.map((tec) => `<li class="technology">
@@ -99,9 +100,6 @@ async function fetchPosts()
             </div>
         `;
 
-
-
-
         countriesContainer.innerHTML = '';
         countriesContainer.insertAdjacentHTML('afterbegin', html);
 
@@ -122,6 +120,18 @@ async function fetchPosts()
             mousewheel: true,
         });
 
+
+        // Add "Read More" functionality
+        const readMoreBtn = document.querySelector('.read-more-btn');
+        const contentPreview = document.querySelector('.content-preview');
+
+        readMoreBtn.addEventListener('click', () =>
+        {
+            contentPreview.classList.toggle('expanded');
+            readMoreBtn.textContent = contentPreview.classList.contains('expanded') ? 'Read Less' : 'Read More';
+        });
+
+
     } catch (error)
     {
         console.error(`Error fetching post data ❌: ${error} `);
@@ -129,6 +139,7 @@ async function fetchPosts()
 }
 
 fetchPosts();
+
 
 
 
