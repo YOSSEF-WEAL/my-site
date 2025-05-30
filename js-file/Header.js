@@ -2,11 +2,16 @@ class Header
 {
     constructor()
     {
-        const pathname = window.location.pathname.toLowerCase(); // التحقق من المسار فقط
+        const pathname = window.location.pathname.toLowerCase();
         let path = './portfolio';
 
-        if (pathname.includes("portfolio") && pathname.endsWith("portfolio")) path = ''; // التحقق من وجود كلمة "portfolio" في نهاية المسار
-        else path = './portfolio';
+        if (pathname.includes("portfolio.html") && pathname.endsWith("portfolio.html"))
+        {
+            path = '';
+        } else
+        {
+            path = './portfolio.html'
+        };
 
         const html = `<nav class="container">
             <a href="./index.html" class="logo"><img src="./imgs/logo_rades.png" alt=""></a>

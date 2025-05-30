@@ -58,16 +58,27 @@ async function fetchPosts(categories = [], page = currentPage, append = false)
                     <a href="./post.html?id=${post.id}" class='productImageCover'>
                         <img loading="lazy" src="${imageUrl}" alt="">
                     </a>
-             
                     <div class="text">
                         <h4><span>${postCategories.join(", ")}</span></h4>
                         <a href="./post.html?id=${post.id}">${post.title.rendered}</a>
                         <p>${truncatedExcerpt}</p>
                         <div class="links">
-                            <a target="_blank" href="${projectLink}" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a target="_blank" href="${repoLink}" class="link"><i class="fa-brands fa-github"></i></a>
-                            <a target="_blank" href="${designLink}" class="link"><i class="fa-brands fa-behance"></i></a>
-                            <a target="_blank" href="${wordpress}" class="link"><i class="fa-brands fa-wordpress"></i></a>
+                            ${projectLink ? `
+                                <a target="_blank" href="${projectLink}" class="link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>` : ''}
+                            ${repoLink ? `
+                                <a target="_blank" href="${repoLink}" class="link">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>` : ''}
+                            ${designLink ? `
+                                <a target="_blank" href="${designLink}" class="link">
+                                    <i class="fa-brands fa-behance"></i>
+                                </a>` : ''}
+                            ${wordpress ? `
+                                <a target="_blank" href="${wordpress}" class="link">
+                                    <i class="fa-brands fa-wordpress"></i>
+                                </a>` : ''}
                         </div>
                     </div>
                 </div>
@@ -75,15 +86,6 @@ async function fetchPosts(categories = [], page = currentPage, append = false)
             countriesContainer.insertAdjacentHTML('beforeend', html);
         });
 
-
-        document.querySelectorAll(".link").forEach(a =>
-        {
-            const href = a.getAttribute('href');
-            if (!href || href === '' || href === '#' || href === 'javascript:void(0)')
-            {
-                a.style.display = 'none';
-            }
-        });
 
         const loadedPosts = document.querySelectorAll('.projec_box').length;
         if (loadedPosts >= totalPosts)
