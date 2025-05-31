@@ -36,11 +36,15 @@ body {
   background: rgb(15 40 47 / 25%);
   border: 2px solid #ffffff75;
   backdrop-filter: blur(30px);
-  width: 500px;
+  width: fit-content;
   border-radius: 8px;
   margin-block: 30px;
   padding: 20px;
+  flex-direction: row-reverse !important;
+  align-items: flex-start !important;
   .profileMain {
+    align-items: end;
+    text-align: end;
     img {
       width: 100px;
     }
@@ -51,6 +55,9 @@ body {
     h6 {
       color: #ffffffb3;
       font-size: 18px;
+    }
+    a {
+      text-align: end !important;
     }
   }
   .scund {
@@ -93,6 +100,7 @@ body {
   }
   .contentCard {
     margin-bottom: 20px;
+    flex-direction: column !important;
   }
 }
 @media (max-width: 500px) {
