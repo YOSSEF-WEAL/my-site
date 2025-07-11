@@ -2,4 +2,3 @@
 from = "/assets/*"
 to = "/assets/:splat"
 status = 200
-
