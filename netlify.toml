@@ -1,4 +1,5 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
+from = "/assets/*"
+to = "/assets/:splat"
 status = 200
+
