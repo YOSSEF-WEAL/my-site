@@ -4,7 +4,7 @@ import Heding from "../ui/Heding";
 
 function Contact() {
   return (
-    <section id="contact" className="relative mt-20 px-10 mb-10">
+    <section id="contact" className="relative mt-20 px-5 md:px-10 mb-10">
       <Heding textWhite={"Contact"} textPrimary={"Me"} />
       <div
         aria-hidden="true"

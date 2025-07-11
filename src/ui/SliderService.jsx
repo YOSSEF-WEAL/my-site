@@ -69,8 +69,8 @@ function SliderService() {
             <SwiperSlide key={index}>
               <div className="p-5 flex items-center justify-center gap-3 flex-col w-full h-full">
                 <img
-                  src={`../public/${slide.img}`}
-                  alt="Innovative and Unique Design UI&UX"
+                  src={`/${slide.img}`}
+                  alt={slide.title}
                   className="w-full max-h-[201px]"
                 />
 

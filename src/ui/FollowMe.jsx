@@ -25,7 +25,7 @@ function FollowMe() {
               href={contact.contactUrl}
               target={contact.target}
               key={i}
-              className="w-[47%] md:w-[22%] flex flex-col items-center gap-3 bg-white/15 p-5 rounded-xl border-3 border-white/60 transition-colors hover:bg-primary/30 hover:border-primary"
+              className="w-[46%] md:w-[22%] flex flex-col items-center gap-3 bg-white/15 p-5 rounded-xl border-3 border-white/60 transition-colors hover:bg-primary/30 hover:border-primary"
             >
               <img
                 src={contact.contactImgUrl}
