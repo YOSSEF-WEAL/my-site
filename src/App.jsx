@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
-import Success from "./ui/success";
+import Success from "./ui/Success";
 import Home from "./ui/Home";
 import PageNotFound from "./ui/PageNotFound";
 import Projects from "./components/Projects";
